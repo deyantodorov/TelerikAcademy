@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="task">
+        <h1>2. Create a function that gets the value of &lt;input type="text"&gt; ands prints its value to the console</h1>
+    </div>
+    <div id="result">
+        <label for="text">Type some text:</label>
+        <input type="text" id="text" />
+        <button onclick="setBodyBackground('text')">Get Input Value</button>
+        <p class="notes">See console for more details...</p>
+    </div>
+
+    <script>
+
+        function setBodyBackground(id) {
+
+            var input = document.getElementById(id).value;
+
+            console.log(input);
+        }
+    </script>
+
+</body>
+</html>

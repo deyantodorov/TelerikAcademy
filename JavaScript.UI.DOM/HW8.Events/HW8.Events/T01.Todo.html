@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/cross-browser-events.js"></script>
+    <style>
+        form input {
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        form input[type=text] {
+            width: 300px;
+            border: 1px solid red;
+        }
+
+        form input[type=button] {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="todoItem">TODO list:</label>
+        <input type="text" name="todoItem" id="todoItem" />
+        <input type="button" value="Add" id="addItem" />
+        <input type="button" value="Delete" id="delItem" />
+        <input type="button" value="Hide" id="hideItem" />
+        <input type="button" value="Show All" id="showAllItems" />
+        <div id="result"></div>
+    </form>
+
+    <script>
+        window.onload = function toDo() {
+
+            var input = document.getElementById('todoItem');
+            var addItem = document.getElementById('addItem');
+            var delItem = document.getElementById('delItem');
+            var hideItem = document.getElementById('hideItem');
+            var showAllItems = document.getElementById('showAllItems');
+            var result = document.getElementById('result');
+            var counter = 1;
+
+            // Action functions
+            function addInput() {
+
+                // stop blank checkbox
+                if (input.value === '') {
+                    return;
+                }
+
+                var p = document.createElement('p');
+                result.appendChild(p);
+
+                var inputCheck = document.createElement('input');
+                inputCheck.setAttribute('type', 'checkbox');
+                inputCheck.setAttribute('name', 'task' + counter)
+                inputCheck.setAttribute('id', 'task' + counter)
+                p.appendChild(inputCheck);
+
+                var label = document.createElement('label');
+                label.setAttribute('for', 'task' + counter);
+                label.innerHTML = input.value;
+                p.appendChild(label);
+
+                counter += 1;
+            }
+
+            function deleteInput() {
+                var allItems = result.getElementsByTagName('p');
+
+                if (allItems === null || allItems === undefined) {
+                    return;
+                }
+
+                for (var i = 0; i < allItems.length; i++) {
+                    
+                    if (allItems[i].firstChild.checked) {
+                        result.removeChild(allItems[i]);
+                        i--;
+                    }
+                }
+
+            }
+
+            function hideInput() {
+                var allItems = result.getElementsByTagName('p');
+
+                if (allItems === null || allItems === undefined) {
+                    return;
+                }
+
+                for (var i = 0; i < allItems.length; i++) {
+
+                    if (allItems[i].firstChild.checked) {
+                        
+                        allItems[i].firstChild.parentNode.style.display='none';
+                    }
+                }
+            }
+
+            function showAllInputs() {
+                var allItems = result.getElementsByTagName('p');
+
+                if (allItems === null || allItems === undefined) {
+                    return;
+                }
+
+                for (var i = 0; i < allItems.length; i++) {
+
+                    if (allItems[i].firstChild.parentNode.style.display = 'none') {
+
+                        allItems[i].firstChild.parentNode.style.display = '';
+                    }
+                }
+            }
+
+            // Event functions
+            attachEventHandler(addItem, 'click', addInput, false);
+
+            attachEventHandler(delItem, 'click', deleteInput, false);
+
+            attachEventHandler(hideItem, 'click', hideInput, false);
+
+            attachEventHandler(showAllItems, 'click', showAllInputs, false);
+        }
+    </script>
+</body>
+</html>

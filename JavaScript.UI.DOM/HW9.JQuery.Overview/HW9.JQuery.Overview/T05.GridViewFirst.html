@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <style>
+        .table {
+            border: 1px solid #000;
+        }
+
+        .table td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <p>First type of 5th task, becuase I wasn't sure how to interpreter the task.</p>
+    <div id="result"></div>
+    <script>
+
+        var data = [
+             {
+                 "name": "Pesho",
+                 "age": "123",
+                 "City": "Sofia",
+             },
+             {
+                 "name": "Gosho",
+                 "age": "321",
+                 "City": "Sofia",
+             },
+             {
+                 "name": "Ivan",
+                 "age": "456",
+                 "City": "Sofia",
+             },
+             {
+                 "name": "Stamant",
+                 "age": "654",
+                 "City": "Sofia",
+             }
+        ];
+
+        $(document).ready(function () {
+
+            function createGrid(list) {
+                if (list.length === 0) {
+                    return;
+                }
+
+                var table = $('<table class="table"></table>');
+                var headerTitles = generateTitles(list);
+
+                $(table).append(headerTitles);
+
+                var content = '';
+
+                for (var i = 0, len = list.length; i < len; i += 1) {
+                    content += '<tr>';
+
+                    for (var j in list[i]) {
+
+                        content += '<td>' + list[i][j] + '</td>';
+                    }
+
+                    content += '</tr>';
+                }
+
+                table.append(content);
+                $('#result').append(table);
+
+                function generateTitles(array) {
+                    var titles = '<tr>';
+
+                    for (var element in array[0]) {
+                        titles += '<td>' + element + '</td>';
+                    }
+
+                    titles += '</tr>';
+
+                    return titles;
+                }
+            }
+
+            createGrid(data);
+        });
+    </script>
+</body>
+</html>

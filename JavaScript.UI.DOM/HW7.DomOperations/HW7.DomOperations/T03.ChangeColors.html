@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Task 3:</h1>
+        <p>Create a text area and two inputs with type="color"</p>
+        <ul>
+            <li>Make the font color of the text area as the value of the first color input</li>
+            <li>Make the background color of the text area as the value of the second input</li>
+        </ul>
+    </div>
+
+    <div class="t4">
+        <label for="fc">Font Color</label>
+        <input type="color" name="fc" id="fc" onchange="changeFontColor();" />
+
+        <label for="bc">Background Color</label>
+        <input type="color" name="bc" id="bc" onchange="changeBackgroundColor();" />
+
+        <textarea id="text" rows="4" cols="40">Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum. </textarea>
+    </div>
+
+    <script>
+
+        var text = document.getElementById('text');
+
+        function changeFontColor() {
+            var fc = document.getElementById('fc').value;
+            text.style.color = fc;
+        }
+
+        function changeBackgroundColor() {
+            var bc = document.getElementById('bc').value;
+            text.style.backgroundColor = bc;
+        }
+
+    </script>
+</body>
+</html>

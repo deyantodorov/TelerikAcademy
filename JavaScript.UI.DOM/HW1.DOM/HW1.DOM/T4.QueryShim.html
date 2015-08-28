@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="task">
+        <h1>4. * Write a script that shims querySelector and querySelectorAll in older browsers</h1>
+    </div>
+    <div id="result">
+        <div id="t1">
+            <div id="t2">
+                <div id="t3" style="display: none">Show me</div>
+            </div>
+        </div>
+        <div class="classTest2" style="display: none;">Class test 1</div>
+        <div class="classTest3" style="display: none;">Class test 2</div>
+        <div class="classTest4" style="display: none;">Class test 3</div>
+    </div>
+
+    <script>
+
+        // Just disable this properties for testing
+        delete (Document.prototype.querySelector);
+        delete (Document.prototype.querySelectorAll);
+
+        // Works only for single selection
+        (function () {
+
+            if (Document.prototype.querySelector === 'undefined') {
+                querySelectorShim();
+            }
+
+            if (Document.prototype.querySelectorAll === 'undefined') {
+                querySelectorAll();
+            }
+
+            function querySelectorShim() {
+                document.querySelector = function querySelector(selector) {
+                    switch (selector.charAt(0)) {
+                        case '#': return document.getElementById(selector.substring(1));
+                        case '.': return document.getElementsByClassName(selector.substring(1)[0]);
+                        default: return document.getElementsByTagName(selector)[0];
+                    }
+                }
+            };
+
+            function querySelectorAll() {
+                document.querySelectorAll = function querySelectorAll(selector) {
+                    switch (selector.charAt(0)) {
+                        case '#': return document.getElementById(selector.substring(1));
+                        case '.': return document.getElementsByClassName(selector.substring(1))[0];
+                        default: return document.getElementsByTagName(selector)[0];
+                    }
+                }
+            };
+
+        })();
+
+        var e = document.querySelector('div');
+        alert(e.innerHTML);
+
+        var i = document.querySelector('#t3');
+        alert(i.innerHTML);
+
+        var c = document.querySelectorAll('.classTest2');
+        alert(c.innerHTML);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        $(document).ready(function () {
+
+            // Create sample of students
+            function Student(firstName, lastName, grade) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.grade = grade;
+            }
+
+            var students = [
+                new Student('Pesho', 'Goshev', 1),
+                new Student('Pesho', 'Goshev', 2),
+                new Student('Pesho', 'Goshev', 3),
+                new Student('Pesho', 'Goshev', 4),
+                new Student('Pesho', 'Goshev', 5),
+                new Student('Pesho', 'Goshev', 6),
+                new Student('Pesho', 'Goshev', 7),
+                new Student('Pesho', 'Goshev', 8),
+            ];
+
+            function createTable(list) {
+                if (list.length === 0) {
+                    return;
+                }
+
+                var table = $('<table border="1">');
+
+                table.append('<tr>'
+                            + '<th>First name</th>'
+                            + '<th>Last name</th>'
+                            + '<th>Grade</th>'
+                            + '</tr>');
+
+                var content = '';
+
+                for (var i = 0, len = list.length; i < len; i += 1) {
+                    content += '<tr><td>' + list[i].firstName + '</td>' + '<td>' + list[i].lastName + '</td>' + '<td>' + list[i].grade + '</td></tr>';
+                }
+
+                table.append(content);
+                $('#result').append(table);
+            }
+
+            createTable(students);
+        });
+    </script>
+</body>
+</html>

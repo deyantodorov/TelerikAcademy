@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Task 2:</h1>
+        <p>Write a script that creates 5 div elements and moves them in circular path with interval of 100 milliseconds</p>
+    </div>
+
+    <div class="stage"></div>
+
+    <script>
+
+        Plot = function (stage) {
+
+            this.setDimensions = function (x, y) {
+                this.element.style.width = x + 'px';
+                this.element.style.height = y + 'px';
+                this.width = x;
+                this.height = y;
+            };
+            this.position = function (x, y) {
+                var xOffset = arguments[2] ? 0 : this.width / 2;
+                var yOffset = arguments[2] ? 0 : this.height / 2;
+                this.element.style.left = (x - xOffset) + 'px';
+                this.element.style.top = (y - yOffset) + 'px';
+                this.x = x;
+                this.y = y;
+            };
+            this.setBackground = function (col) {
+                this.element.style.background = col;
+            };
+            this.kill = function () {
+                stage.removeChild(this.element);
+            };
+            this.rotate = function (str) {
+                this.element.style.webkitTransform = this.element.style.MozTransform =
+                this.element.style.OTransform = this.element.style.transform =
+                'rotate(' + str + ')';
+            };
+            this.content = function (content) {
+                this.element.innerHTML = content;
+            };
+            this.round = function (round) {
+                this.element.style.borderRadius = round ? '50%/50%' : '';
+            };
+            this.element = document.createElement('div');
+            this.element.style.position = 'absolute';
+            stage.appendChild(this.element);
+        };
+
+        var stage = document.querySelector('.stage'),
+        plots = 5,
+        increase = Math.PI * 2 / plots,
+        angle = 0,
+        x = 0,
+        y = 0,
+        plotcache = [];
+
+        for (var i = 0; i < plots; i++) {
+            var p = new Plot(stage);
+            p.setBackground('green');
+            p.setDimensions(40, 40);
+            plotcache.push(p);
+        }
+
+        function rotate() {
+            for (var i = 0; i < plots; i++) {
+                x = 100 * Math.cos(angle) + 200;
+                y = 100 * Math.sin(angle) + 200;
+                plotcache[i].rotate(Math.atan2(y - 200, x - 200) + 'rad');
+                plotcache[i].position(x, y);
+                angle += increase;
+            }
+            angle += 0.06;
+        }
+
+        setInterval(rotate, 100);
+
+    </script>
+</body>
+</html>

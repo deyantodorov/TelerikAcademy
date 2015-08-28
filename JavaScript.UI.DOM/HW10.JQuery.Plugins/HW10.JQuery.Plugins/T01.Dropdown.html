@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="scripts/jquery-2.1.1.min.js"></script>
+    <script src="scripts/dropdown-ui.js"></script>
+    <style>
+        .dropdown-list-container ul {
+            width: 200px;
+            list-style: none;
+        }
+
+        .dropdown-list-container ul li {
+            padding: 20px;
+            background: #ccc;
+            border: 1px solid #000;
+        }
+
+        .dropdown-list-container ul li.selectedItem {
+            border: 1px solid red;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <select id="dropdown">
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        <option value="6">Six</option>
+    </select>
+    <script>
+        $(document).ready(function () {
+            $('#dropdown').dropdown();
+        });
+    </script>
+</body>
+</html>

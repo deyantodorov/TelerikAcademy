@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mean image to SVG</title>
+    <style>
+        body {
+            font-family: Calibri;
+            letter-spacing: 4px;
+        }
+
+        .c1 {
+            fill: white;
+            font-size: 22px;
+            stroke-width: 2;
+        }
+
+        .c2, .c3, .c4, .c5 {
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .c2 {
+            fill: #3E3F37;
+        }
+
+        .c3 {
+            fill: #282827;
+        }
+
+        .c4 {
+            fill: #E23337;
+        }
+
+        .c5 {
+            fill: #8EC74E;
+        }
+    </style>
+</head>
+<body>
+    <h1>First and third task is combined in one solution</h1>
+
+    <svg width="400" height="400">
+        <circle cx="200" cy="100" r="55" fill="#3E3F37" />
+        <path d="M200 70 Q170 95 200 150" fill="#5EB14A" stroke="#5EB14A" stroke-width="3" />
+        <path d="M200 70 Q230 95 200 150" fill="#449644" stroke="#449644" stroke-width="3" />
+        <circle cx="200" cy="150" r="55" fill="#282827" />
+        <text x="152" y="150" class="c1">express</text>
+        <circle cx="200" cy="204" r="55" fill="#E23337" />
+        <path d="M177 209 L 173 180 L 200 171 L 226 180 L 223 209" fill="none" stroke="lightgrey" stroke-width="3" />
+        <path d="M190 204 L 200 181 L 210 204" fill="none" stroke="lightgrey" stroke-width="5" />
+        <circle cx="200" cy="253" r="55" fill="#8EC74E" />
+        <g transform="translate(151,243)">
+            <polygon points="10 0 20 5 20 20 13 17 13 10 10 8 7 10 7 17 0 20 0 5 10 0" fill="#47493F" />
+            <polygon points="10 0 20 5 20 15 10 20 0 15 0 5" fill="#FEFEFE" transform="translate(25,0)" />
+            <polygon points="10 0 13 2 13 -12 20 -8 20 17 10 23 0 17 0 7 10 0" fill="#47493F" transform="translate(50,0)" />
+            <circle cx="60" cy="12" r="3" fill="#F2F8EC" />
+            <polygon points="10 0 20 5 20 9 13 12 7 12 15 18 10 23 0 17 0 5 10 0" fill="#47493F" transform="translate(77,0)" />
+            <circle cx="87" cy="11" r="3" fill="#F2F8EC" />
+        </g>
+        <text x="90" y="105" class="c2">m</text>
+        <text x="95" y="157" class="c3">e</text>
+        <text x="93" y="214" class="c4">a</text>
+        <text x="93" y="270" class="c5">n</text>
+    </svg>
+
+    <div id="svg-wrapper"></div>
+
+    <!--<script>
+        var wrapper = document.getElementById('svg-wrapper');
+        var svgNS = 'http://www.w3.org/2000/svg';
+
+        var svg = makeSvg(400, 400);
+        wrapper.appendChild(svg);
+
+        svg.appendChild(makeCircle(200, 100, 55, '#3E3F37'));
+        svg.appendChild(makePath('M200 70 Q170 95 200 150', '#5EB14A', '#5EB14A', 3));
+        svg.appendChild(makePath('M200 70 Q230 95 200 150', '#449644', '#449644', 3));
+        svg.appendChild(makeCircle(200, 150, 55, '#282827'));
+        svg.appendChild(makeText('express', 152, 150, 'c1'));
+        svg.appendChild(makeCircle(200, 204, 55, '#E23337'));
+        svg.appendChild(makePath('M177 209 L 173 180 L 200 171 L 226 180 L 223 209', 'none', 'lightgrey', 3));
+        svg.appendChild(makePath('M190 204 L 200 181 L 210 204', 'none', 'lightgrey', 5));
+        svg.appendChild(makeCircle(200, 253, 55, '#8EC74E'));
+
+        var g = makeGroup('translate(151,243)');
+        svg.appendChild(g);
+
+        g.appendChild(makePolygon('10 0 20 5 20 20 13 17 13 10 10 8 7 10 7 17 0 20 0 5 10 0', '#47493F'));
+        g.appendChild(makePolygon('10 0 20 5 20 15 10 20 0 15 0 5', '#FEFEFE', 'translate(25,0)'));
+        g.appendChild(makePolygon('10 0 13 2 13 -12 20 -8 20 17 10 23 0 17 0 7 10 0', '#47493F', 'translate(50,0)'));
+        g.appendChild(makeCircle(60, 12, 3, '#F2F8EC'));
+        g.appendChild(makePolygon('10 0 20 5 20 9 13 12 7 12 15 18 10 23 0 17 0 5 10 0', '#47493F', 'translate(77,0)'));
+        g.appendChild(makeCircle(87, 11, 3, '#F2F8EC'));
+
+        svg.appendChild(makeText('m', 90, 105, 'c2'));
+        svg.appendChild(makeText('e', 95, 157, 'c3'));
+        svg.appendChild(makeText('a', 93, 214, 'c4'));
+        svg.appendChild(makeText('n', 93, 270, 'c5'));
+
+        function makeSvg(width, height) {
+            var svg = document.createElementNS(svgNS, 'svg');
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            return svg;
+        }
+
+        function makeCircle(cx, cy, r, fill) {
+            var circle = document.createElementNS(svgNS, 'circle');
+            circle.setAttribute('cx', cx);
+            circle.setAttribute('cy', cy);
+            circle.setAttribute('r', r);
+            circle.setAttribute('fill', fill);
+            return circle;
+        }
+
+        function makePath(d, fill, stroke, strokeWidth) {
+            var path = document.createElementNS(svgNS, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', fill);
+            path.setAttribute('stroke', stroke);
+            path.setAttribute('stroke-width', strokeWidth);
+            return path;
+        }
+
+        function makeText(displayText, x, y, className) {
+            var text = document.createElementNS(svgNS, 'text');
+            text.textContent = displayText;
+            text.setAttribute('x', x);
+            text.setAttribute('y', y);
+            text.setAttribute('class', className);
+            return text;
+        }
+
+        function makePolygon(points, fill, translate) {
+            var polygon = document.createElementNS(svgNS, 'polygon');
+            polygon.setAttribute('points', points);
+            polygon.setAttribute('fill', fill);
+
+            if (arguments[2] !== undefined) {
+                polygon.setAttribute('transform', translate);
+            }
+
+            return polygon;
+        }
+
+        function makeGroup(translate) {
+            var g = document.createElementNS(svgNS, 'g');
+
+            if (arguments[0] !== undefined) {
+                g.setAttribute('transform', translate)
+            }
+
+            return g;
+        }
+    </script>-->
+</body>
+</html>

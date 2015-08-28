@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Task 5:</h1>
+        <p>* Create a TreeView component:</p>
+        <ul>
+            <li>
+                Initially only the top items must be visible
+            </li>
+            <li>
+                On item click
+                <ul>
+                    <li>If its children are hidden (collapsed), they must be made visible (expanded)</li>
+                    <li>If its children are visible (expanded), they must be made hidden (collapsed)</li>
+                </ul>
+            </li>
+            <li>Research about events</li>
+        </ul>
+    </div>
+
+    <div id="result">
+    </div>
+    <script>
+        window.onload = function () {
+            generateMenu(6);
+            attachEvent();
+        };
+
+        // Generate tree menu with tree levels
+        function generateMenu(menuItems) {
+            var menuParent = document.getElementById('result');
+            var docFragLevelOne = document.createDocumentFragment();
+            var docFragLevelTwo = document.createDocumentFragment();
+            var docFragLevelThree = document.createDocumentFragment();
+
+            var ul = document.createElement('ul');
+            ul.setAttribute('id', 'menu');
+
+            menuParent.appendChild(ul);
+
+            for (var i = 0; i < menuItems; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = 'Item ' + (i + 1);
+                
+                var subMenu = document.createElement('ul');
+                subMenu.style.display = 'none';
+                li.appendChild(subMenu);
+
+                for (var j = 0; j < menuItems; j++) {
+                    var subMenuLi = document.createElement('li');
+                    subMenuLi.innerHTML = 'Sub Item ' + (j + 1);
+                    docFragLevelTwo.appendChild(subMenuLi);
+
+                    var subSubMenu = document.createElement('ul');
+                    subSubMenu.style.display = 'none';
+                    subMenuLi.appendChild(subSubMenu);
+
+                    for (var k = 0; k < menuItems; k++) {
+
+                        var subSubMenuLi = document.createElement('li');
+                        subSubMenuLi.innerHTML = 'Sub Sub Item ' + (k + 1);
+                        docFragLevelThree.appendChild(subSubMenuLi);
+
+                    }
+
+                    subSubMenu.appendChild(docFragLevelThree);
+                }
+
+                subMenu.appendChild(docFragLevelTwo);
+                docFragLevelOne.appendChild(li);
+            }
+
+            ul.appendChild(docFragLevelOne);
+        }
+
+        function attachEvent() {
+            var menu = document.getElementById('menu');
+
+            menu.addEventListener('click', function (action) {
+                var target = action.target;
+
+                // prevent using of click outside of li elements
+                if (!(target instanceof HTMLLIElement)) {
+                    return;
+                }
+
+                // check for ul element 
+                if (target.firstElementChild === null) {
+                    return;
+                }
+
+                // play with arrows
+                if (target.className === 'on') {
+                    target.className = '';
+                }
+                else {
+                    target.className = 'on';
+                }
+
+                // Show hide first child ul
+                if (target.firstElementChild.style.display === 'none') {
+                    target.firstElementChild.style.display = '';
+                }
+                else {
+                    target.firstElementChild.style.display = 'none'
+                }
+            });
+        }
+    </script>
+</body>
+</html>

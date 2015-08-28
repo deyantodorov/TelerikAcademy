@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="task">
+        <h1>1. Write a script that selects all the div nodes that are directly inside other div elements</h1>
+        <ul>
+            <li>Create a function using querySelectorAll()</li>
+            <li>Create a function using getElementsByTagName()</li>
+        </ul>
+    </div>
+    <div id="result">
+        <div>
+            First level
+            <div>Second level</div>
+            <div>
+                Second level
+                <div>Third level</div>
+            </div>
+        </div>
+        <p><em><strong>See console for results...</strong></em></p>
+    </div>
+    <script>
+        function getDivByQuery(id) {
+
+            var result = document.querySelectorAll('div > div');
+            return result;
+        }
+
+        function getByTagName(id) {
+
+            var result = document.getElementById(id).getElementsByTagName('div');
+            return result;
+        }
+
+        console.log(getDivByQuery('result'));
+        console.log(getByTagName('result'));
+
+    </script>
+</body>
+</html>

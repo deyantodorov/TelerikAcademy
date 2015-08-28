@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <label for="color">Insert/Select color or type hex value and mouseleave: </label>
+    <input type="color" id="color" name="color" />
+    <script>
+        $(document).ready(function () {
+            $('#color').mouseleave(function () {
+                $('body').css('background-color', this.value);
+            });
+        });
+    </script>
+</body>
+</html>

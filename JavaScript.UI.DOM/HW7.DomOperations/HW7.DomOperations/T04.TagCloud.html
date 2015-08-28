@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Task 4:</h1>
+        <p>Create a tag cloud:</p>
+        <ul>
+            <li>Visualize a string of tags (strings) in a given container</li>
+            <li>By given minFontSize and maxFontSize, generate the tags with different font-size, depending on the number of occurrences</li>
+        </ul>
+    </div>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+        var result = document.getElementById('result');
+
+        var tags = ["cms", "javascript", "js", "ASP.NET MVC", ".net", ".net", "css", "wordpress", "xaml", "js", "http", "web", "asp.net", "asp.net MVC", "ASP.NET MVC", "wp", "javascript", "js", "cms", "html", "javascript", "http", "http", "CMS"];
+
+        var tagCloud = generateTagCloud(tags, 12, 36);
+
+        result.appendChild(tagCloud);
+
+        function generateTagCloud(arr, minFontSize, maxFontSize) {
+
+            function getCloud(array, minFontSize, maxFontSize) {
+
+                var result = document.createElement('div');
+
+                var minSize = minFontSize;
+                var maxSize = maxFontSize;
+                var fontSizeStep = Math.round((maxSize - minSize) / array.length);
+
+
+                for (var i = 0, rowLen = array.length; i < rowLen; i += 1) {
+
+                    var span = document.createElement('span');
+                    span.innerText = array[i][0];
+
+                    if (maxSize > minSize) {
+                        span.style.fontSize = maxSize + 'px';
+                    }
+                    else {
+                        span.style.fontSize = minSize + 'px';
+                    }
+                    span.style.margin = '5px 15px';
+                    span.style.display = 'inline-block';
+
+                    maxSize -= fontSizeStep;
+
+                    result.appendChild(span);
+                }
+
+                return result;
+            }
+
+            var dict = {},
+                sortedDict = [],
+                i = 0, len = arr.length,
+                cloud;
+
+            // Count number of repeated words
+            for (i; i < len; i += 1) {
+
+                if (arr[i] in dict) {
+                    dict[arr[i].toString()]++;
+                }
+                else {
+                    dict[arr[i].toString()] = 1;
+                }
+            }
+
+            // Sort object by number of values
+            for (var word in dict) {
+                sortedDict.push([word, dict[word]]);
+            }
+
+            sortedDict.sort(function (a, b) {
+                return b[1] - a[1];
+            });
+
+            return getCloud(sortedDict, minFontSize, maxFontSize);
+        }
+
+    </script>
+</body>
+</html>

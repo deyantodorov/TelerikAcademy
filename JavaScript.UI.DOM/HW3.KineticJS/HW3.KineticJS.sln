@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW3.KineticJS", "HW3.KineticJS\HW3.KineticJS.csproj", "{EBDE0A2B-7661-4796-ADBE-07B41862B8CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBDE0A2B-7661-4796-ADBE-07B41862B8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDE0A2B-7661-4796-ADBE-07B41862B8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDE0A2B-7661-4796-ADBE-07B41862B8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDE0A2B-7661-4796-ADBE-07B41862B8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <style>
+        .before {
+            background: blue;
+            color: orange;
+            font-weight: bold;
+        }
+        .after {
+            background: orange;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="before">Insert before</button>
+    <button id="after">Insert after</button>
+    <script>
+        $(document).ready(function () {
+
+            var before = 1;
+            var after = 1;
+
+            $('#before').click(function () {
+                $('body').prepend('<p class="before">' + before + '</p>');
+                before += 1;
+            });
+
+            $('#after').click(function () {
+                $('body').append('<p class="after">' + after + '</p>');
+                after += 1;
+            });
+        });
+    </script>
+</body>
+</html>

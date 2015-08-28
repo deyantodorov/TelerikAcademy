@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <style>
+        #result {
+            text-align: center;
+        }
+
+        button {
+            display: inline-block;
+            text-align: center;
+        }
+
+        #slideContainer {
+            margin: 10px;
+            border: 1px solid #000;
+        }
+
+            #slideContainer div {
+                padding: 20px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        window.onload = function () {
+
+            var numberOfSlides = 1;
+
+            // Initialize: add controls, add slides
+            addControls();
+            createSlides(5);
+
+            function createSlides(number) {
+                // Reuse this function for single slide creation
+                if (number === null || number === undefined) {
+                    return;
+                }
+
+                for (var i = 0; i < number; i++) {
+                    $('#slideContainer').append($('<div>' + numberOfSlides + '</div>').hide());
+                    numberOfSlides += 1;
+                }
+
+                // Show only first slide
+                $('#slideContainer div').first().show();
+            }
+
+            function addSlide() {
+                $('#slideContainer').append($('<div>' + numberOfSlides + '</div>').hide());
+                numberOfSlides += 1;
+            }
+
+            // Add control buttons, slide container
+            function addControls() {
+                $('#result').append('<button id="nextSlide">Next</button>')
+                            .append('<button id="prevSlide">Previous</button>')
+                            .append('<button id="newSlide">New Slide</button>')
+                            .append('<div id="slideContainer"></div>');
+            }
+
+            function getNext() {
+                if ($('#slideContainer div:visible').next().length !== 0) {
+                    $('#slideContainer div:visible').next().show().prev().hide();
+                }
+                else {
+                    // create loop effect
+                    $('#slideContainer div:visible').hide();
+                    $('#slideContainer div:first').show();
+                }
+            }
+
+            function getPrev() {
+                if ($('#slideContainer div:visible').next().length !== 0) {
+                    $('#slideContainer div:visible').prev().show().next().hide();
+                }
+                else {
+                    // create loop effect
+                    $('#slideContainer div:visible').hide();
+                    $('#slideContainer div:first').show();
+                }
+            }
+
+            // Add event for prev/next 
+            $('#nextSlide').on('click', getNext);
+
+            $('#prevSlide').on('click', getPrev);
+
+            // Attache eventHandler on newSlide
+            $('#newSlide').on('click', function () {
+                addSlide();
+            });
+
+            window.setInterval(function () {
+                $('#nextSlide').trigger('click');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

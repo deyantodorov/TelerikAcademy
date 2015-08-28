@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <style>
+        .table {
+            border: 1px solid #000;
+        }
+
+            .table th, .table td {
+                min-width: 50px;
+                height: 20px;
+                border: 1px solid #000;
+            }
+
+            .table th {
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <p>Second type of 5th task, becuase I wasn't sure how to interpreter the task.</p>
+    <p>Click on every cell to add content. Add new row with button.</p>
+    <div id="result"></div>
+    <script>
+
+        $(document).ready(function () {
+
+            var numberOfRows = 0,
+                numberOfCols = 0;
+
+            function askForTableDimension() {
+                $('body')
+                    .append('<label for="rows" id="inputRows">Rows: </label>')
+                    .append('<input type="text" id="rows" value="5" />');
+
+                $('body')
+                   .append('<label for="cols" id="inputCols">Cols: </label>')
+                   .append('<input type="text" id="cols" value="5" />');
+
+                $('body')
+                   .append('<button id="generateTable">Generate table</button>');
+            }
+
+            function askForInnerTableDimension() {
+                $('body')
+                    .append('<label for="rows" id="inputInnerRows">Rows: </label>')
+                    .append('<input type="text" id="innerRows" value="5" />');
+
+                $('body')
+                   .append('<label for="cols" id="inputInnerCols">Cols: </label>')
+                   .append('<input type="text" id="innerCols" value="5" />');
+
+                $('body')
+                   .append('<button id="generateInnerTable">Generate inner table</button>');
+            }
+
+            function generateTable(rows, cols) {
+                var $table = $('<table class="table" />');
+
+                var content = '';
+                for (var r = 0; r < rows; r++) {
+
+                    content += '<tr>';
+
+                    if (r > 0) {
+                        // td
+                        for (var c = 0; c < cols; c++) {
+                            content += '<td> </td>';
+                        }
+                    }
+                    else {
+                        // th
+                        for (c = 0; c < cols; c++) {
+                            content += '<th> </th>';
+                        }
+                    }
+
+                    content += '</tr>';
+                }
+
+                $($table).append(content);
+                $('#result').append($table);
+            }
+
+            function showControls() {
+                $('<button id="editHeader" />').html('Edit table header').appendTo(document.body);
+                $('<button id="editCell" />').html('Edit table cell').appendTo(document.body);
+                $('<button id="editRow" />').html('Edit table row').appendTo(document.body);
+
+            }
+
+            function readInput() {
+                $('#generateTable').on('click', function () {
+
+                    var $rows = $('#rows').val();
+                    var $cols = $('#cols').val();
+
+                    // Don't generete when incorrect data is entered
+                    if (false && isNaN(parseInt($rows)) && isNaN(parseInt($cols))) {
+                        return;
+                    }
+                    else {
+                        // hide input options
+                        $('#inputRows, #rows, #inputCols, #cols, #generateTable').hide();
+
+                        numberOfRows = $rows;
+                        numberOfCols = $cols;
+
+                        // generate table
+                        generateTable($rows, $cols);
+                        attachEvents();
+                        addRow();
+                    }
+                });
+            }
+
+            function editCell() {
+                var $text = $(this).html();
+                $(this).html('');
+
+                var content = '<input type="text" id="editedText" value="' + $text + '" />'
+                $(this).append(content);
+
+                // Disable event
+                $('#result').off('click', '.table th, .table td', editCell);
+
+                // Add control buttons
+                $('<button id="save" />').html('Save').appendTo($(this));
+                $('<button id="cancel" />').html('Cancel').appendTo($(this));
+
+                // Controls buttons events
+                $('#save').click(function () {
+                    $(this).parent().html($('#editedText').val()); // save new content
+                    $('#result').on('click', '.table th, .table td', editCell);
+                });
+
+                $('#cancel').click(function () {
+                    $(this).parent().html($text); // set old content
+                    $('#result').on('click', '.table th, .table td', editCell);
+                });
+            }
+
+            function attachEvents() {
+                $('#result').on('click', '.table th, .table td', editCell);
+            }
+
+            function addRow() {
+                $('<button id="addRow" />').html('Add Row').prependTo('#result');
+
+                $('#addRow').click(function () {
+
+                    var content = '';
+
+                    for (var i = 0; i < numberOfCols; i++) {
+                        content += '<td> </td>';
+                    }
+
+                    var newRow = $('<tr />').append(content);
+
+                    $('.table tbody').append(newRow);
+                });
+            }
+
+            askForTableDimension();
+            readInput();
+
+        });
+    </script>
+</body>
+</html>

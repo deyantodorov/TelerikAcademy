@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Task 1:</h1>
+        <p>Write a script that creates a number of div elements. Each div element must have the following</p>
+        <ul>
+            <li>Random width and height between 20px and 100px</li>
+            <li>Random background color</li>
+            <li>Random font color</li>
+            <li>Random position on the screen (position:absolute)</li>
+            <li>A strong element with text "div" inside the div</li>
+            <li>Random border radius</li>
+            <li>Random border color</li>
+            <li>Random border width between 1px and 20px</li>
+        </ul>
+    </div>
+
+    <div class="form">
+        <label for="num">Enter number of 'divs': </label>
+        <input name="num" id="num" type="text" onclick="this.value=''" />
+        <button id="btn" onclick="generateDivs();">Generate</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        var wrapper = document.getElementById('wrapper');
+        var result = document.getElementById('result');
+
+        var maxWidth = result.offsetWidth - 120;
+        var maxHeight = result.offsetHeight - 120;
+
+        function generateRandomColor() {
+            var red = (Math.random() * 256) | 0; // binary and 0 to convert to integer
+            var green = (Math.random() * 256) | 0;
+            var blue = (Math.random() * 256) | 0;
+            return 'rgb(' + red + ',' + green + ',' + blue + ')';
+        }
+
+        function generateRandomInt(min, max) {
+            var randomValue = (Math.random() * (max - min + 1) + min) | 0;
+            return randomValue;
+        }
+
+        function generateDivs() {
+
+            // First remove all childs in container
+            while (result.firstChild) {
+                result.removeChild(result.firstChild);
+            }
+
+            // if count is undefined create 10 elements by default
+            var count = (document.getElementById('num').value | 0) || 10;
+            var documentFragment = document.createDocumentFragment();
+
+            // Generate divs
+            for (var i = 0; i < count; i++) {
+                var div = document.createElement('div');
+
+                div.style.width = generateRandomInt(20, 100) + 'px';
+                div.style.height = generateRandomInt(20, 100) + 'px';
+                div.style.backgroundColor = generateRandomColor();
+                div.style.color = generateRandomColor();
+                div.style.position = 'absolute';
+                div.style.top = generateRandomInt(0, maxHeight) + 'px';
+                div.style.left = generateRandomInt(0, maxWidth) + 'px';
+                div.style.fontSize = generateRandomInt(8, 32) + 'px';
+                div.style.borderRadius = generateRandomInt(1, 20) + 'px';
+                div.style.border = generateRandomInt(1, 20) + 'px' + ' solid ' + generateRandomColor();
+
+                var strong = document.createElement('strong');
+                strong.textContent = 'div';
+                div.appendChild(strong);
+
+                documentFragment.appendChild(div);
+            }
+
+            result.appendChild(documentFragment);
+        }
+
+    </script>
+</body>
+</html>

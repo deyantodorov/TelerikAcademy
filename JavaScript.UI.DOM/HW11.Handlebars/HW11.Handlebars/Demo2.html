@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script id="post-template" type="text/x-handlebars-template">
+        {{#each posts}}
+        <div class='post'>
+            <hr />
+            {{@index}}
+            <hr />
+            <h1 class="post-title">{{title}} #{{id}}</h1>
+            <p class="post-content">{{content}}</p>
+            {{#if date}}
+            <span>{{date}}</span>
+            {{/if}}
+            {{#unless date}}
+            <span>no date</span>
+            {{/unless}}
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="scripts/handlebars.min.js"></script>
+    <script>
+        var templateNode = document.getElementById('post-template').innerHTML;
+        var template = Handlebars.compile(templateNode);
+
+        var posts = [{
+            id: 1,
+            title: 'Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.',
+            content: new Handlebars.SafeString('Sapien elit <strong>in malesuada semper</strong> mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.'),
+            date: '12-12-2012',
+        }, {
+            id: 2,
+            title: 'Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.',
+            content: new Handlebars.SafeString('Sapien elit <strong>in malesuada semper</strong> mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.')
+        }, {
+            id: 3,
+            title: 'Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.',
+            content: new Handlebars.SafeString('Sapien elit <strong>in malesuada semper</strong> mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.')
+        }, {
+            id: 4,
+            title: 'Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.',
+            content: new Handlebars.SafeString('Sapien elit <strong>in malesuada semper</strong> mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.')
+        }, {
+            id: 5,
+            title: 'Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.',
+            content: new Handlebars.SafeString('Sapien elit <strong>in malesuada semper</strong> mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.')
+        }]
+
+        var postHTML = template({ posts: posts });
+
+        document.body.innerHTML += postHTML;
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Windows 8 to SVG and JS</title>
+    <style>
+        body {
+            background: #131a52;
+            font-family: Calibri;
+            font-size: 1em;
+            line-height: 2.5em;
+        }
+
+        h1, a, p {
+            color: #fff;
+        }
+
+        .cWhite {
+            fill: #fff;
+        }
+
+        .cLightblue {
+            fill: lightblue;
+        }
+
+        .fs55 {
+            font-size: 55px;
+        }
+
+        .fs40 {
+            font-size: 40px;
+        }
+
+        .fs30 {
+            font-size: 30px;
+        }
+
+        .fs18 {
+            font-size: 18px;
+        }
+
+        .fs16 {
+            font-size: 16px;
+        }
+
+        .fs15 {
+            font-size: 15px;
+        }
+
+        .fs13 {
+            font-size: 13px;
+        }
+
+        .fs11 {
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Second and third task is combined in one solution.</h1>
+    <p>P.S. I know that for images I could use svg icons (<a href="http://icomoon.io/">http://icomoon.io</a>), but to save time I use images. For IE icon you could see an example</p>
+
+    <svg width="1280" height="800">
+        <text x="70" y="70" class="cLightblue fs40">Start</text>
+        <rect x="70" y="140" width="100" height="100" fill="#3893ea" />
+        <text x="85" y="230" class="cWhite fs13">Store</text>
+        <image x="90" y="150" width="60" height="60" xlink:href="img/store.png" />
+        <rect x="175" y="140" width="100" height="100" fill="#93C92B" />
+        <text x="180" y="230" class="cWhite fs13">Xbox Live Games</text>
+        <image x="195" y="155" width="60" height="60" xlink:href="img/XboxLiveGames.png" />
+        <rect x="70" y="245" width="100" height="100" fill="#8C0496" />
+        <text x="85" y="336" class="cWhite fs13">Maps</text>
+        <image x="90" y="260" width="60" height="60" xlink:href="img/maps.png" />
+        <rect x="175" y="245" width="100" height="100" fill="#3893ea" />
+        <text x="180" y="336" class="cWhite fs13">Internet Explorer</text>
+        <g transform="translate(195, 260)">
+            <path d="M43.020 36.846h13.831c0.107-0.959 0.149-1.939 0.149-2.941 0-4.701-1.262-9.109-3.464-12.906 2.278-6.053 2.197-11.191-0.853-14.261-2.9-2.888-10.681-2.419-19.477 1.476-0.651-0.049-1.308-0.075-1.971-0.075-12.073 0-22.203 8.308-25.002 19.503 3.787-4.849 7.772-8.364 13.094-10.925-0.484 0.454-3.308 3.261-3.783 3.736-14.036 14.032-18.462 32.362-13.7 37.125 3.62 3.62 10.181 3.008 17.717-0.682 3.504 1.785 7.471 2.791 11.673 2.791 11.316 0 20.906-7.284 24.38-17.429h-13.938c-1.918 3.538-5.669 5.946-9.974 5.946-4.305 0-8.056-2.408-9.974-5.946-0.853-1.598-1.343-3.431-1.343-5.37v-0.042h22.632zM20.408 30.047c0.32-5.69 5.051-10.23 10.826-10.23s10.507 4.539 10.826 10.23h-21.652zM52.557 9.598c1.964 1.985 1.915 5.638 0.235 10.197-2.879-4.389-7.062-7.848-12-9.823 5.28-2.264 9.575-2.564 11.764-0.374zM5.477 56.675c-2.507-2.508-1.751-7.771 1.478-14.111 2.010 5.641 5.927 10.376 10.977 13.427-5.592 2.538-10.168 2.969-12.455 0.684z" class="cWhite" />
+        </g>
+        <rect x="70" y="351" width="205" height="100" fill="darkorange" />
+        <text x="85" y="440" class="cWhite fs13">Video</text>
+        <image x="145" y="370" width="60" height="60" xlink:href="img/video.png" />
+        <rect x="70" y="457" width="205" height="100" fill="#29a09c" />
+        <text x="85" y="545" class="cWhite fs13">Desktop</text>
+
+        <rect x="280" y="140" width="205" height="100" fill="#B71C46" />
+        <text x="295" y="230" class="cWhite fs13">Photos</text>
+        <image x="350" y="155" width="60" height="60" xlink:href="img/photos.png" />
+        <rect x="280" y="245" width="205" height="100" fill="#8C0496" />
+        <text x="295" y="336" class="cWhite fs13">Messaging</text>
+        <image x="350" y="255" width="70" height="70" xlink:href="img/messaging.png" />
+        <rect x="280" y="351" width="205" height="100" fill="green" />
+        <text x="295" y="374" class="cWhite fs18">Devon Hypnotize</text>
+        <text x="295" y="388" class="cWhite fs11">something they can do about him</text>
+        <text x="295" y="402" class="cWhite fs11">pile of books and scroll next to</text>
+        <text x="465" y="442" class="cWhite fs15">3</text>
+        <rect x="280" y="457" width="205" height="100" fill="#3893ea" />
+        <text x="295" y="545" class="cWhite fs13">Weather</text>
+        <image x="350" y="475" width="60" height="60" xlink:href="img/weather.png" />
+
+        <rect x="490" y="140" width="205" height="100" fill="green" />
+        <text x="507" y="230" class="cWhite fs13">Calendar</text>
+        <text x="622" y="190" class="cWhite fs55">12</text>
+        <text x="622" y="205" class="cWhite fs13">Monday</text>
+        <rect x="490" y="245" width="205" height="100" fill="darkorange" />
+        <text x="560" y="275" class="cWhite fs13">Mike Gibbs, Troll</text>
+        <text x="560" y="288" class="cWhite fs13">Scoutand 5 others</text>
+        <text x="560" y="301" class="cWhite fs13">commented on your</text>
+        <text x="560" y="314" class="cWhite fs13">photo.</text>
+        <image x="500" y="265" width="55" height="55" xlink:href="img/MikeGibbs.jpg" />
+        <rect x="490" y="351" width="100" height="100" fill="black" />
+        <rect x="595" y="351" width="100" height="100" fill="#3893ea" />
+        <text x="612" y="440" class="cWhite fs13">Solitair</text>
+        <rect x="490" y="457" width="100" height="100" fill="#B71C46" />
+        <text x="507" y="545" class="cWhite fs13">Camera</text>
+        <image x="514" y="475" width="55" height="55" xlink:href="img/camera.png" />
+        <rect x="595" y="457" width="100" height="100" fill="#93C92B" />
+        <text x="599" y="545" class="cWhite fs13">Xbox Companion</text>
+        <image x="619" y="475" width="55" height="55" xlink:href="img/xboxcom.png" />
+
+        <rect x="740" y="140" width="205" height="100" fill="#8C0496" />
+        <text x="755" y="230" class="cWhite fs13">Music</text>
+        <image x="816" y="155" width="60" height="60" xlink:href="img/music.png" />
+        <rect x="740" y="245" width="205" height="100" fill="green" />
+        <text x="755" y="336" class="cWhite fs13">Finance</text>
+        <image x="816" y="260" width="60" height="60" xlink:href="img/finance.png" />
+        <rect x="740" y="351" width="100" height="100" fill="darkorange" />
+        <text x="755" y="440" class="cWhite fs13">Reader</text>
+        <image x="760" y="365" width="55" height="55" xlink:href="img/reader.png" />
+        <rect x="845" y="351" width="100" height="100" fill="darkblue" />
+        <text x="860" y="380" class="cWhite fs16">Windows</text>
+        <text x="860" y="395" class="cWhite fs16">Explorer</text>
+        <image x="850" y="410" width="40" height="40" xlink:href="img/WindowsExplorer.png" />
+        <image x="740" y="457" width="205" height="100" xlink:href="img/WordPress.jpg" />
+
+        <rect x="950" y="140" width="100" height="100" class="cWhite" />
+        <image x="939" y="140" width="100" height="100" xlink:href="img/2s.jpg" />
+        <rect x="950" y="245" width="100" height="100" fill="#3d76ad" />
+        <rect x="950" y="351" width="100" height="100" fill="#3893ea" />
+        <text x="963" y="440" class="cWhite fs13">SkyDrive</text>
+        <image x="965" y="365" width="65" height="65" xlink:href="img/skyDrive.png" />
+
+        <text x="870" y="70" class="cLightblue fs30">Richard</text>
+        <text x="928" y="88" class="cLightblue fs15">Perry</text>
+    </svg>
+
+    <div id="svg-wrapper"></div>
+
+    <script>
+        var wrapper = document.getElementById('svg-wrapper');
+        var svgNS = 'http://www.w3.org/2000/svg';
+
+        var svg = makeSvg(1280, 800);
+        wrapper.appendChild(svg);
+
+        svg.appendChild(makeText('Start', 70, 70, 'cLightblue fs40'));
+        svg.appendChild(makeRect(70, 140, 100, 100, '#3893ea'));
+        svg.appendChild(makeText('Store', 85, 230, 'cWhite fs13'));
+        var g = makeGroup('translate(90, 150)');
+        svg.appendChild(makeImage(90, 150, 60, 60, 'img/store.png'));
+        svg.appendChild(makeRect(175, 140, 100, 100, '#93C92B'));
+        svg.appendChild(makeText('Xbox Live Games', 180, 230, 'cWhite fs13'));
+        svg.appendChild(makeImage(195, 155, 60, 60, 'img/XboxLiveGames.png'));
+        svg.appendChild(makeRect(70, 245, 100, 100, '#8C0496'));
+        svg.appendChild(makeText('Maps', 85, 336, 'cWhite fs13'));
+        svg.appendChild(makeImage(90, 260, 60, 60, 'img/maps.png'));
+        svg.appendChild(makeRect(175, 245, 100, 100, '#3893ea'));
+        svg.appendChild(makeText('Internet Explorer', 180, 336, 'cWhite fs13'));
+        var g = makeGroup('translate(195, 260)');
+        g.appendChild(makePath('M43.020 36.846h13.831c0.107-0.959 0.149-1.939 0.149-2.941 0-4.701-1.262-9.109-3.464-12.906 2.278-6.053 2.197-11.191-0.853-14.261-2.9-2.888-10.681-2.419-19.477 1.476-0.651-0.049-1.308-0.075-1.971-0.075-12.073 0-22.203 8.308-25.002 19.503 3.787-4.849 7.772-8.364 13.094-10.925-0.484 0.454-3.308 3.261-3.783 3.736-14.036 14.032-18.462 32.362-13.7 37.125 3.62 3.62 10.181 3.008 17.717-0.682 3.504 1.785 7.471 2.791 11.673 2.791 11.316 0 20.906-7.284 24.38-17.429h-13.938c-1.918 3.538-5.669 5.946-9.974 5.946-4.305 0-8.056-2.408-9.974-5.946-0.853-1.598-1.343-3.431-1.343-5.37v-0.042h22.632zM20.408 30.047c0.32-5.69 5.051-10.23 10.826-10.23s10.507 4.539 10.826 10.23h-21.652zM52.557 9.598c1.964 1.985 1.915 5.638 0.235 10.197-2.879-4.389-7.062-7.848-12-9.823 5.28-2.264 9.575-2.564 11.764-0.374zM5.477 56.675c-2.507-2.508-1.751-7.771 1.478-14.111 2.010 5.641 5.927 10.376 10.977 13.427-5.592 2.538-10.168 2.969-12.455 0.684z', '#ffffff', 'none', 0));
+        svg.appendChild(g);
+        svg.appendChild(makeRect(70, 351, 205, 100, 'darkorange'));
+        svg.appendChild(makeText('Video', 85, 440, 'cWhite fs13'));
+        svg.appendChild(makeImage(145, 370, 60, 60, 'img/video.png'));
+        svg.appendChild(makeRect(70, 457, 205, 100, '#29a09c'));
+        svg.appendChild(makeText('Desktop', 85, 545, 'cWhite fs13'));
+        svg.appendChild(makeRect(280, 140, 205, 100, '#B71C46'));
+        svg.appendChild(makeText('Photos', 295, 230, 'cWhite fs13'));
+        svg.appendChild(makeImage(350, 155, 60, 60, 'img/photos.png'));
+        svg.appendChild(makeRect(280, 245, 205, 100, '#8C0496'));
+        svg.appendChild(makeText('Messaging', 295, 336, 'cWhite fs13'));
+        svg.appendChild(makeImage(350, 255, 70, 70, 'img/messaging.png'));
+        svg.appendChild(makeRect(280, 351, 205, 100, 'green'));
+        svg.appendChild(makeText('Devon Hypnotize', 295, 374, 'cWhite fs18'));
+        svg.appendChild(makeText('something they can do about him', 295, 388, 'cWhite fs11'));
+        svg.appendChild(makeText('pile of books and scroll next to', 295, 402, 'cWhite fs11'));
+        svg.appendChild(makeText('3', 465, 442, 'cWhite fs15'));
+        svg.appendChild(makeRect(280, 457, 205, 100, '#3893ea'));
+        svg.appendChild(makeText('Weather', 295, 545, 'cWhite fs13'));
+        svg.appendChild(makeImage(350, 475, 60, 60, 'img/weather.png'));
+        svg.appendChild(makeRect(490, 140, 205, 100, 'green'));
+        svg.appendChild(makeText('Calendar', 507, 230, 'cWhite fs13'));
+        svg.appendChild(makeText('12', 622, 190, 'cWhite fs55'));
+        svg.appendChild(makeText('Monday', 622, 205, 'cWhite fs13'));
+        svg.appendChild(makeRect(490, 245, 205, 100, 'darkorange'));
+        svg.appendChild(makeText('Mike Gibbs, Troll', 560, 275, 'cWhite fs13'));
+        svg.appendChild(makeText('Scoutand 5 others', 560, 288, 'cWhite fs13'));
+        svg.appendChild(makeText('commented on your', 560, 301, 'cWhite fs13'));
+        svg.appendChild(makeText('photo.', 560, 314, 'cWhite fs13'));
+        svg.appendChild(makeImage(500, 265, 55, 55, 'img/MikeGibbs.jpg'));
+        svg.appendChild(makeRect(490, 351, 100, 100, 'black'));
+        svg.appendChild(makeRect(595, 351, 100, 100, '#3893ea'));
+        svg.appendChild(makeText('Solitair', 612, 440, 'cWhite fs13'));
+        svg.appendChild(makeRect(490, 457, 100, 100, '#B71C46'));
+        svg.appendChild(makeText('Camera', 507, 545, 'cWhite fs13'));
+        svg.appendChild(makeImage(514, 475, 55, 55, 'img/camera.png'));
+        svg.appendChild(makeRect(595, 457, 100, 100, '#93C92B'));
+        svg.appendChild(makeText('Xbox Companion', 599, 545, 'cWhite fs13'));
+        svg.appendChild(makeImage(619, 475, 55, 55, 'img/xboxcom.png'));
+        svg.appendChild(makeRect(740, 140, 205, 100, '#8C0496'));
+        svg.appendChild(makeText('Music', 755, 230, 'cWhite fs13'));
+        svg.appendChild(makeImage(816, 155, 60, 60, 'img/music.png'));
+        svg.appendChild(makeRect(740, 245, 205, 100, 'green'));
+        svg.appendChild(makeText('Finance', 755, 336, 'cWhite fs13'));
+        svg.appendChild(makeImage(816, 260, 60, 60, 'img/finance.png'));
+        svg.appendChild(makeRect(740, 351, 100, 100, 'darkorange'));
+        svg.appendChild(makeText('Reader', 755, 440, 'cWhite fs13'));
+        svg.appendChild(makeImage(760, 365, 55, 55, 'img/reader.png'));
+        svg.appendChild(makeRect(845, 351, 100, 100, 'darkblue'));
+        svg.appendChild(makeText('Windows', 860, 380, 'cWhite fs16'));
+        svg.appendChild(makeText('Explorer', 860, 395, 'cWhite fs16'));
+        svg.appendChild(makeImage(850, 410, 40, 40, 'img/WindowsExplorer.png'));
+        svg.appendChild(makeImage(740, 457, 205, 100, 'img/WordPress.jpg'));
+        svg.appendChild(makeRect(950, 140, 100, 100, 'cWhite'));
+        svg.appendChild(makeImage(939, 140, 100, 100, 'img/2s.jpg'));
+        svg.appendChild(makeRect(950, 245, 100, 100, '#3d76ad'));
+        svg.appendChild(makeRect(950, 351, 100, 100, '#3893ea'));
+        svg.appendChild(makeText('SkyDrive', 963, 440, 'cWhite fs13'));
+        svg.appendChild(makeImage(965, 365, 65, 65, 'img/skyDrive.png'));
+        svg.appendChild(makeText('Richard', 870, 70, 'cLightblue fs30'));
+        svg.appendChild(makeText('Perry', 928, 88, 'cLightblue fs15'));
+
+        function makeSvg(width, height) {
+            var svg = document.createElementNS(svgNS, 'svg');
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            return svg;
+        }
+
+        function makeCircle(cx, cy, r, fill) {
+            var circle = document.createElementNS(svgNS, 'circle');
+            circle.setAttribute('cx', cx);
+            circle.setAttribute('cy', cy);
+            circle.setAttribute('r', r);
+            circle.setAttribute('fill', fill);
+            return circle;
+        }
+
+        function makeRect(x, y, width, height, fill) {
+            var rect = document.createElementNS(svgNS, 'rect');
+            rect.setAttribute('x', x);
+            rect.setAttribute('y', y);
+            rect.setAttribute('width', width);
+            rect.setAttribute('height', height);
+            rect.setAttribute('fill', fill);
+            return rect;
+        }
+
+        function makePath(d, fill, stroke, strokeWidth) {
+            var path = document.createElementNS(svgNS, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', fill);
+            path.setAttribute('stroke', stroke);
+            path.setAttribute('stroke-width', strokeWidth);
+            return path;
+        }
+
+        function makeText(displayText, x, y, className) {
+            var text = document.createElementNS(svgNS, 'text');
+            text.textContent = displayText;
+            text.setAttribute('x', x);
+            text.setAttribute('y', y);
+            text.setAttribute('class', className);
+            return text;
+        }
+
+        function makePolygon(points, fill, translate) {
+            var polygon = document.createElementNS(svgNS, 'polygon');
+            polygon.setAttribute('points', points);
+            polygon.setAttribute('fill', fill);
+
+            if (arguments[2] !== undefined) {
+                polygon.setAttribute('transform', translate);
+            }
+
+            return polygon;
+        }
+
+        function makeGroup(translate) {
+            var g = document.createElementNS(svgNS, 'g');
+
+            if (arguments[0] !== undefined) {
+                g.setAttribute('transform', translate)
+            }
+
+            return g;
+        }
+
+        function makeImage(x, y, width, height, link) {
+            var image = document.createElementNS(svgNS, 'asdfasdf');
+            //image.setAttribute('x', x);
+            //image.setAttribute('y', y);
+            //image.setAttribute('width', width);
+            //image.setAttribute('height', height);
+            //image.setAttribute('xlink:href', link);
+
+            image.setAttribute('src', link);
+            return image;
+        }
+    </script>
+</body>
+</html>
