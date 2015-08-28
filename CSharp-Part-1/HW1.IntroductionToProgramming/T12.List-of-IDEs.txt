@@ -1,0 +1,23 @@
+12. Perform a research (e.g. in Google or Wikipedia) and provide a short list with popular development environments (IDEs) like Visual Studio. Write in a text file called “list-of-IDEs.txt” at least five IDEs along with 2-3 sentences about each of them. Use English.
+
+NetBeans IDE
+
+The Smarter and Faster Way to Code
+Quickly and easily develop desktop, mobile and web applications with Java, HTML5, PHP, C/C++ and more. NetBeans IDE is FREE, open source, and has a worldwide community of users and developers.
+
+Zend Studio
+
+The next-generation PHP IDE designed to create robust PHP apps while boosting developers’ productivity. It is the only PHP IDE that combines mobile development with PHP and includes a sample mobile application with source code.
+
+Aptana Studio 3
+
+The world’s most powerful open-source web development IDE just got better. Rebuilt from the ground-up. It's now much faster, customizable and includes new features to help you be more productive.
+
+Eclipse
+
+Eclipse is famous for our Java Integrated Development Environment (IDE), but our C/C++ IDE and PHP IDE are pretty cool too. You can easily combine language support and other features into any of our default packages, and the Eclipse Marketplace allows for virtually unlimited customization and extension
+
+Java IDE
+Java EE 
+C/C++
+PHP

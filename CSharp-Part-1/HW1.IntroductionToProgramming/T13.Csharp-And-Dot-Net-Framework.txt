@@ -1,0 +1,23 @@
+13. Describe the difference between C# and .NET Framework in 2-3 sentences.
+
+C# is a programming language, .NET is a blanket term that tends to cover both the .NET Framework (an application framework library) and the Common Language Runtime which is the runtime in which .NET assemblies are run.
+
+Microsoft's implementation of C# is heavily integrated with the .NET Framework so it is understandable that the two concepts would be confused. However it is important to understand that they are two very different things.
+
+Here is a class written in C#:
+
+class Example { }
+
+Here is a class written in C# that explicitly uses a .NET framework assembly, type, and method:
+
+class Example
+{
+    static void Main()
+    {
+        // Here we call into the .NET framework to 
+        // write to the output console
+        System.Console.Write("hello, world");
+    }
+}
+
+As I mentioned before, it is very difficult to use Microsoft's implementation of C# without using the .NET framework as well. Also, the reason I use the phrase Microsoft's implementation of C# is because there are other implementations of C# available.
