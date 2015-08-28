@@ -1,0 +1,217 @@
+﻿/*
+    Reset margins and paddings    
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+     Clear floats
+*/
+.clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/*
+    Page style task 1
+*/
+body.task1 {
+    font: 0.75em/1.125em Tahoma, Arial, Helvetica, sans-serif;
+    background: #595959;
+    color: #b3b2a5;
+}
+
+.task1 a {
+    color: #f7db91;
+    text-decoration: none;
+}
+
+    .task1 a:hover {
+        color: #ffffff;
+    }
+
+.task1 h1 {
+    padding: 10px 5px;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.task1 dl {
+    margin: 0;
+    padding: 5px 10px 10px;
+}
+
+    .task1 dl:first-of-type a:before {
+        content: '\25CF';
+        color: #71b47a;
+        margin-right: 3px;
+        font-size: 1.5em;
+    }
+
+    .task1 dl:first-of-type dd:last-child {
+        color: #d7050d;
+        font-weight: bold;
+    }
+
+    .task1 dl:last-of-type dd {
+        font-weight: bold;
+        color: #dc6a26;
+    }
+
+.task1 dt {
+    float: left;
+    width: 150px;
+    min-height: 25px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #e8e9e8;
+}
+
+.task1 dd {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+/*
+    Page style task 2
+*/
+body.task2 {
+    font: 0.75em/1.125em Tahoma, Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #272722;
+}
+
+.task2 table {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #bbb99d;
+    border-spacing: 0 0;
+}
+
+table th {
+    padding: 0 5px;
+    border-bottom: 1px solid #27710a;
+    border-right: 1px solid #72c530;
+    background: #5ec306;
+    background: linear-gradient(to bottom, #5ec306, #4eb106);
+    color: #fff;
+    text-align: left;
+    line-height: 30px;
+    font-weight: normal;
+    font-size: 1.125em;
+}
+
+table td {
+    padding: 0 5px;
+    border-right: 1px solid #bbb99d;
+    line-height: 30px;
+}
+
+table tr:nth-last-of-type(odd) td {
+    background: #ececd8;
+}
+
+
+table td:last-child {
+    border-right: 0;
+}
+
+table td span {
+    margin: 0;
+    padding: 0 0 0 28px;
+}
+
+.c1 {
+    background: url(../img/sprite.png) 0 0px no-repeat;
+}
+
+.c2 {
+    background: url(../img/sprite.png) 0 -15px no-repeat;
+}
+
+.c3 {
+    background: url(../img/sprite.png) 0 -30px no-repeat;
+}
+
+/*
+    Page style task 3
+*/
+body.task3 {
+    font: 0.85em/1.5em Georgia, "Times New Roman", Times, serif;
+    background: #a9a9a9;
+    color: #000;
+}
+
+.task3 header {
+    text-align: center;
+}
+
+.task3 section header {
+    text-align: left;
+}
+
+.task3 h1 {
+    padding: 40px 0 20px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #fafad2;
+}
+
+.task3 nav ul {
+    font-size: 1.8em;
+    line-height: 1.8em;
+    list-style: none;
+}
+
+    .task3 nav ul a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+    }
+
+        .task3 nav ul a.current, .task3 nav ul a.current:hover {
+            background: #d3d3d3;
+            text-decoration: none;
+        }
+
+        .task3 nav ul a:hover {
+            text-decoration: underline;
+        }
+
+.task3 article {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding: 10px 10px;
+}
+
+    .task3 article h2 {
+        padding: 30px 0 30px;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fafad2;
+    }
+
+    .task3 article footer {
+        padding: 20px 0 0 0;
+        font-size: 0.9em;
+        text-align: left;
+    }
+
+.task3 footer {
+    padding: 20px 0 0;
+    text-align: center;
+    font-size: 1.2em;
+}

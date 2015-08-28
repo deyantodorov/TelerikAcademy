@@ -1,0 +1,19 @@
+﻿.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+        height: 0;
+    }
+}
+
+body {
+    background: #000;
+
+    div {
+        width: (21px + 21em + 1%);
+        .clearfix();
+    }
+}

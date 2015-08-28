@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/modernizr.js"></script>
+</head>
+<body class="task4">
+    <section class="calc">
+        <header class="clearfix">
+            <h1>Calculator</h1>
+            <nav>
+                <ul>
+                    <li class="btnMin"><a href="#"></a></li>
+                    <li class="btnMax"><a href="#"></a></li>
+                    <li class="btnClose"><a href="#"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            <div class="articleBorder clearfix">
+                <header>
+                    <menu>
+                        <ul>
+                            <li><a href="#">View</a>
+                                <ul>
+                                    <li><a href="#">Standard <span>Alt+1</span></a></li>
+                                    <li><a href="#">Scientific <span>Alt+2</span></a></li>
+                                    <li><a href="#">Programmer <span>Alt+3</span></a></li>
+                                    <li><a href="#">Statistics <span>Alt+4</span></a></li>
+                                    <li><a href="#">History <span>Ctrl+4</span></a></li>
+                                    <li><a href="#">Digit grouping</a></li>
+                                    <li><a href="#">Basic <span>Ctrl+F4</span></a></li>
+                                    <li><a href="#">Unit conversion <span>Ctrl+U</span></a></li>
+                                    <li><a href="#">Date calculation <span>Ctrl+E</span></a></li>
+                                    <li><a href="#">Worksheets</a>
+                                        <ul>
+                                            <li><a href="#">Mortgage</a></li>
+                                            <li><a href="#">Vehicle lease</a></li>
+                                            <li><a href="#">Fuel economy (mpg)</a></li>
+                                            <li><a href="#">Fuel economy (l/100 km)</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Edit</a>
+                                <ul>
+                                    <li><a href="#">Copy</a></li>
+                                    <li><a href="#">Paste</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Help</a>
+                                <ul>
+                                    <li><a href="#">View Help</a></li>
+                                    <li><a href="#">About Calculator</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </menu>
+                </header>
+
+                <form class="calcDisplay" method="post" action="#">
+                    <input type="text" value="0" />
+                </form>
+
+                <div class="bin">
+                    <ul>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                    </ul>
+                    <ul>
+                        <li>63</li>
+                        <li>47</li>
+                        <li>32</li>
+                    </ul>
+                    <ul>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                    </ul>
+                    <ul>
+                        <li>31</li>
+                        <li>15</li>
+                        <li>0</li>
+                    </ul>
+                </div>
+
+                <form class="btn clearfix" method="post" action="#">
+
+                    <div class="optArea">
+                        <ul class="calcOpt">
+                            <li>
+                                <input type="radio" name="numSys" id="numSys1" value="hex" />
+                                <label for="numSys1">Hex</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numSys" id="numSys2" value="dec" checked="checked" />
+                                <label for="numSys2">Dec</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numSys" id="numSys3" value="oct" />
+                                <label for="numSys3">Oct</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numSys" id="numSys4" value="bin" />
+                                <label for="numSys4">Bin</label>
+                            </li>
+                        </ul>
+
+                        <ul class="calcOpt">
+                            <li>
+                                <input type="radio" name="wSize" id="wSize1" value="qword" checked="checked" />
+                                <label for="wSize1">Qword</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="wSize" id="wSize2" value="dword" />
+                                <label for="wSize2">Dword</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="wSize" id="wSize3" value="word" />
+                                <label for="wSize3">Word</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="wSize" id="wSize4" value="byte" />
+                                <label for="wSize4">Byte</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btnArea">
+
+                        <div class="row">
+                            <button class="noact" disabled="disabled">&nbsp;</button>
+                            <button class="btnType1">Mod</button>
+                            <button class="noact" disabled="disabled">A</button>
+                            <button class="btnType2">MC</button>
+                            <button class="btnType2">MR</button>
+                            <button class="btnType2">MS</button>
+                            <button class="btnType2">M+</button>
+                            <button class="btnType2">M-</button>
+                        </div>
+
+                        <div class="row">
+                            <button class="btnType1">(</button>
+                            <button class="btnType1">)</button>
+                            <button class="noact" disabled="disabled">B</button>
+                            <button class="btnType1">←</button>
+                            <button class="btnType1">CE</button>
+                            <button class="btnType1">C</button>
+                            <button class="btnType1">±</button>
+                            <button class="noact" disabled="disabled">√</button>
+                        </div>
+
+                        <div class="row">
+                            <button class="btnType1">RoL</button>
+                            <button class="btnType1">RoR</button>
+                            <button class="noact" disabled="disabled">C</button>
+                            <button class="btnType3">7</button>
+                            <button class="btnType3">8</button>
+                            <button class="btnType3">9</button>
+                            <button class="btnType1">/</button>
+                            <button class="noact" disabled>%</button>
+                        </div>
+
+                        <div class="row">
+                            <button class="btnType1">Or</button>
+                            <button class="btnType1">Xor</button>
+                            <button class="noact" disabled="disabled">D</button>
+                            <button class="btnType3">4</button>
+                            <button class="btnType3">5</button>
+                            <button class="btnType3">6</button>
+                            <button class="btnType1">*</button>
+                            <button class="noact" disabled="disabled">1/x</button>
+                        </div>
+
+                        <div class="rowLeft">
+                            <div class="row">
+                                <button class="btnType1">Lsh</button>
+                                <button class="btnType1">Rsh</button>
+                                <button class="noact" disabled="disabled">E</button>
+                                <button class="btnType3">1</button>
+                                <button class="btnType3">2</button>
+                                <button class="btnType3">3</button>
+                                <button class="btnType1">-</button>
+                            </div>
+
+                            <div class="row">
+                                <button class="btnType1">Not</button>
+                                <button class="btnType1">And</button>
+                                <button class="noact" disabled="disabled">F</button>
+                                <button class="btnType32">0</button>
+                                <button class="noact" disabled="disabled">.</button>
+                                <button class="btnType1">+</button>
+                            </div>
+                        </div>
+
+                        <div class="rowRight">
+                            <button class="btnType1 btn2"><strong>=</strong></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

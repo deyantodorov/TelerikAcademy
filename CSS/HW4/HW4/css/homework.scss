@@ -1,0 +1,340 @@
+.clearfix{
+	zoom:1;
+	&:after{
+		display:block;
+		height:0;
+		content:"";
+		clear:both;
+	}
+}
+
+$site-height: 100%;
+$background: #d593ff;
+$color: white;
+
+@mixin site-font($font-size:14px, $font-style:normal, $font-family:Arial)
+{
+	font: $font-size $font-style $font-family;
+}
+
+@mixin body-gradient {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q1OTNmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIzJSIgc3RvcC1jb2xvcj0iI2FlNTJmMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iIzk1MjJmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5MjE1ZjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #d593ff 0%, #ae52f3 23%, #9522f0 49%, #9215f2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d593ff), color-stop(23%,#ae52f3), color-stop(49%,#9522f0), color-stop(100%,#9215f2));
+    background: -webkit-linear-gradient(top, #d593ff 0%,#ae52f3 23%,#9522f0 49%,#9215f2 100%);
+    background: -o-linear-gradient(top, #d593ff 0%,#ae52f3 23%,#9522f0 49%,#9215f2 100%);
+    background: -ms-linear-gradient(top, #d593ff 0%,#ae52f3 23%,#9522f0 49%,#9215f2 100%);
+    background: linear-gradient(to bottom, #d593ff 0%,#ae52f3 23%,#9522f0 49%,#9215f2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d593ff', endColorstr='#9215f2',GradientType=0 );
+}
+@mixin font-ConsolasRegular {
+	@font-face {
+		font-family: 'ConsolasRegular';
+		src: url('fonts/consolas-webfont.eot');
+		src: url('fonts/consolas-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/consolas-webfont.woff') format('woff'), url('fonts/consolas-webfont.ttf') format('truetype'), url('fonts/consolas-webfont.svg#consolasregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+@mixin font-EdwardianScriptItcregular {
+	@font-face {
+		font-family: 'EdwardianScriptItcregular';
+		src: url('fonts/itcedscr-webfont.eot');
+		src: url('fonts/itcedscr-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/itcedscr-webfont.woff') format('woff'), url('fonts/itcedscr-webfont.ttf') format('truetype'), url('fonts/itcedscr-webfont.svg#edwardian_script_itcregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+@include font-ConsolasRegular;
+@include font-EdwardianScriptItcregular;
+
+html {
+	height: $site-height;
+}
+
+body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
+    display: block;
+}
+
+a img {
+	border: 0;
+}
+
+body {
+	height: $site-height;
+    @include site-font;
+    background: $background;
+	@include body-gradient;
+    color: $color;
+
+	header {
+		padding-top: 25px;
+		padding-bottom: 5px;
+		padding-right: 15px;
+		padding-left: 15px;
+
+		div#header-container {
+		@extend .clearfix;
+	
+			div#logo-container {
+				float: left;
+				position: relative;
+			}
+
+			div#reg-form-container {
+				float: right;
+				position: relative;
+				right: 5%;
+				top: 50%;
+
+					div {
+						text-align: right;
+
+							label {
+								width: 50px;
+								margin: 5px;
+							}
+
+							input {
+								width: 130px;
+								border: 1px solid #603382;
+								border-radius: 10px;
+								padding: 2px 5px;
+								margin: 5px;
+								outline: none;
+								background: #b35ef3;
+								color: #fff;
+								&:focus {
+									border-color: #fff;
+								}
+							}
+						}
+					button {
+						margin-left: auto;
+						margin-right: auto;
+						font-weight: bold;
+						border: 1px solid #603382;
+						border-style: outset;
+						border-radius: 10px;
+						border-color: #c0afce #3c2051 #3c2051 #c0afce;
+						padding: 5px 8px;
+						cursor: pointer;
+						background: #b35ef3;
+						color: #fff;
+						&:hover {
+							background-color: #8949b9;
+							border-style: inset;
+							border-color: #3c2051 #c0afce #c0afce #3c2051;
+					}
+					
+				}
+			}
+		}
+
+		nav {
+		@extend .clearfix;
+		display: inline-block;
+        width: 75%;
+        margin: 20px 20px 20px 20px;
+        padding: 12px;
+        border: 1px solid #000;
+        border-radius: 10px;
+
+		ul.nav-list {
+			list-style-type: none;
+		}
+
+			ul {
+			@extend .clearfix;
+
+				li {
+					float: left;
+					margin: 0;
+
+					a {
+						text-decoration: none;
+						padding: 0 10px 0 10px;
+						color: white;
+						font: 1.4em normal Arial;
+					}
+
+					a.selected {
+						font-weight: bold;
+					}
+
+					&:hover > a {
+						text-decoration: underline;
+						color: #a8a8a8;
+					}
+
+					&:hover > a + ul {
+						display: block;
+					}
+
+					ul.sub-nav-list {
+						position: absolute;
+						display: none;
+						background-color: rgba(179, 94, 243, 0.9);
+						border-radius: 5px;
+					}
+
+					ul li {
+						float: none;
+						margin: 0 15px;
+						padding: 10px 0;
+						border-bottom: 1px solid black;
+
+						&:last-of-type {
+							border-bottom: none;
+						}
+
+						& > a {
+							font-size: 1.2em;
+							color: #fff;
+						}
+					}
+				}
+
+				li ul.sub-nav-list {
+				@extend .clearfix;
+
+				}
+			}
+		}
+	}
+
+	section {
+	@extend .clearfix;
+		width: 75%;
+		float: left;
+		color: #fff;
+
+		article {
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid black;
+			border-radius: 10px;
+
+				header {
+					background: none;
+					padding: 5px;
+
+					h1 {
+						font-size: 1.4em;
+						padding: 0;
+					}
+				}
+
+				footer {
+					padding: 5px;
+
+					p {
+						font-size: 16px;
+						text-align: right;
+						font-weight: normal;
+
+						time {
+							font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+						}
+						
+						a {
+							color: #cca3f8;
+							text-decoration: none;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+		}
+	}
+
+	aside {
+	@extend .clearfix;
+
+	float: left;
+    width: 20%;
+    margin: 20px;
+
+		& > ul {
+			list-style-type: none;
+
+			& > li {
+				margin: 15px 0;
+				padding: 15px;
+				border: 1px solid black;
+				border-radius: 5px;
+
+				h2 {
+					font-size: 1.1em;
+					font-weight: bold;
+				}
+
+				p {
+					margin-top: 10px;
+					margin-right: 5px;
+					margin-bottom: 10px;
+					margin-left: 5px;
+					font-size: 14px;
+
+					a {
+						color: #aaaaaa;
+						text-decoration: none;
+					}
+
+					strong {
+						color: #cccccc;
+						font-weight: bold;
+						font-style: normal;
+					}
+
+					em {
+						color: #cccccc;
+						font-weight: normal;
+						font-style: italic;
+					}
+				}
+
+				ul {
+					list-style-type: none;
+					margin-top: 10px;
+					margin-right: 0;
+					margin-bottom: 10px;
+					margin-left: 0px;
+
+					li {
+						margin-top: 5px;
+						margin-left: 10px;
+						margin-bottom: 0px;
+						margin-right: 0px;
+						background: url(../images/li-dot.png) no-repeat;
+						background-position: 0 50%;
+						padding-left: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		clear: both;
+		padding-top: 15px;
+		padding-bottom: 25px;
+		padding-right: 0px;
+		padding-left: 0px;
+		text-align: center;
+
+		p {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+	}
+}
+
