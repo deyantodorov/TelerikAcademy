@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AcademyGeometry.Engine.FigureController">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAIABAAAAAAAAAEAAIAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Engine\FigureController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcademyGeometry.Models.Figure">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAICAQAAAAAABEAAAAAAA=</HashCode>
+      <FileName>Models\Figure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AcademyGeometry.Models.LineSegment">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABEAAAAAAACAAAAAAAAAAIAEAAAA=</HashCode>
+      <FileName>Models\LineSegment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AcademyGeometry.Models.Triangle">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAsAEAAAA=</HashCode>
+      <FileName>Models\Triangle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AcademyGeometry.Models.Vector">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAGACABAIAAAAAAAAAAQAAAEMAACA=</HashCode>
+      <FileName>Models\Vector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcademyGeometry.Models.Vector3D">
+    <Position X="11.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgQAAAABAAAAAEYAUAAAAAAAAABAAAAAAAAMACYAE=</HashCode>
+      <FileName>Models\Vector3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcademyGeometry.Models.Vertex">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vertex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcademyGeometry.Program">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcademyGeometry.Models.Circle" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Models\Circle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="AcademyGeometry.Interfaces.IAreaMeasurable">
+    <Position X="13.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Interfaces\IAreaMeasurable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AcademyGeometry.Interfaces.IFlat">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IFlat.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AcademyGeometry.Interfaces.ILengthMeasurable">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ILengthMeasurable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AcademyGeometry.Interfaces.ITransformable">
+    <Position X="13.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAABEAAAAAAA=</HashCode>
+      <FileName>Interfaces\ITransformable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AcademyGeometry.Interfaces.IVolumeMeasurable">
+    <Position X="13.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IVolumeMeasurable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

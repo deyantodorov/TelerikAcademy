@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="T01.School.Classes" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Classes.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="T01.School.Discipline" BaseTypeListCollapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAABAEAIAAAASAAAAEAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Discipline.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="T01.School.MainProgram" Collapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAQAAAAAAAQAAAAAAAAAAAACAQAAAAAAAABAAAAAA=</HashCode>
+      <FileName>MainProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="T01.School.People">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAEAABAAIAEAAAQAAAAEAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>People.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="T01.School.School">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="T01.School.Student">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="T01.School.Teacher">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="T01.School.Validation" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Validation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="T01.School.Contracts.IComment" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IComment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="T01.School.Contracts.IPeople" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Contracts\IPeople.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="T01.School.TextIdentifier" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvkEAAAA=</HashCode>
+      <FileName>TextIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
