@@ -1,0 +1,48 @@
+﻿body {
+    background: #FFF;
+    color: #000;
+    font-size: 1em;
+}
+
+table {
+    border: 1px solid #c1b9b9;
+    border-spacing: 0 0;
+}
+
+tfoot td {
+    text-align: center;
+    background: #dafb88;
+}
+
+td {
+    border: 1px solid #c1b9b9;
+}
+
+    td.left {
+        width: 200px;
+        text-align: right;
+    }
+
+    td.right {
+        width: auto;
+    }
+
+    td label {
+        padding: 0 5px 0 0;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    td input {
+        margin: 5px 3px 5px;
+    }
+
+#state,
+#zip,
+#pCode,
+#pArea,
+#month,
+#day,
+#year {
+    width: 20%;
+}

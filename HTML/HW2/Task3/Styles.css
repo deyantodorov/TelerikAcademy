@@ -1,0 +1,36 @@
+﻿body {
+    background: #FFF;
+    color: #000;
+    font-size: 1em;
+}
+
+table {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #0094ff;
+    border-spacing: 5px 5px;
+}
+
+th {
+    border: 1px solid #0094ff;
+}
+
+    th input {
+        width: 95%;
+        padding: 2px;
+    }
+
+td {
+    grid-cell: none;
+    border: none;
+}
+
+input {
+    width: 100%;
+}
+
+    input[type="text"],
+    input.result {
+        text-align: right;
+        border: 0;
+    }

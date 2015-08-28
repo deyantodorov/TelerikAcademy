@@ -1,0 +1,90 @@
+﻿body {
+    background: #000;
+    color: #000;
+    font-size: 1em;
+    font-family: Arial;
+}
+
+.tableOut {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    border-spacing: 0 0;
+    background: #FFF;
+}
+
+    .tableOut thead td {
+        border-bottom: 2px solid #000;
+        text-align: center;
+    }
+
+    .tableOut td.toFilter {
+        vertical-align: top;
+        width: 30%;
+    }
+
+.toFilter label {
+    display: block;
+    padding: 15px 0;
+}
+
+    .toFilter label span {
+        margin: 0 0 0 20px;
+    }
+
+.toFilter input {
+    width: 250px;
+}
+
+.tableOut thead ul {
+    margin: 0;
+    padding: 0;
+}
+
+    .tableOut thead ul li {
+        display: inline;
+    }
+
+        .tableOut thead ul li a {
+            margin: 0 5px;
+            font-size: 1.3em;
+            line-height: 2em;
+            color: #0094ff;
+        }
+
+            .tableOut thead ul li a:hover {
+                text-decoration: none;
+                color: #ff6a00;
+            }
+
+fieldset {
+    margin: 10px;
+    float: left;
+    width: 300px;
+}
+
+.tableIn {
+    border-spacing: 5px 0;
+}
+
+td.tiOne {
+    vertical-align: bottom;
+    width: 150px;
+}
+
+    td.tiOne p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+td.tiTwo {
+    vertical-align: bottom;
+    width: 200px;
+}
+
+    td.tiTwo p {
+        margin: 0;
+        padding: 5px 0;
+    }

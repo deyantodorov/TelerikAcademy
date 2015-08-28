@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+    <meta name="description" content="Create a web page using semantic HTML by the design in homework-design-2.pptx" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/modernizr.js"></script>
+</head>
+<body>
+    <form method="post" action="#">
+        <header>
+            <h1><a href="#">LinkedIn</a></h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">What is LinkedIn</a></li>
+                    <li><a href="#">Join Together</a></li>
+                    <li>
+                        <fieldset>
+                            <legend>Sign in</legend>
+                            <ul>
+                                <li>
+                                    <label for="email">Email: </label>
+                                    <input type="email" name="email" id="email" />
+                                </li>
+                                <li>
+                                    <label for="pass">Password: </label>
+                                    <input type="password" name="pass" id="pass" />
+                                </li>
+                                <li>
+                                    <input type="button" value="Sign in" name="btnSignIn" id="btnSignIn" /></li>
+                            </ul>
+                        </fieldset>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <header>
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
+                <ul>
+                    <li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</li>
+                    <li>It was popularised in the 1960s with the release of Letraset sheets</li>
+                    <li>Lorem Ipsum passages, and more recently with desktop publishing</li>
+                </ul>
+            </header>
+
+            <h3>Join LinkedIn Today</h3>
+            <fieldset>
+                <legend>Sign Up</legend>
+                <ul>
+                    <li>
+                        <label for="joinFn">First name: </label>
+                        <input type="text" name="joinFn" id="joinFn" />
+                    </li>
+                    <li>
+                        <label for="joinLn">Last name: </label>
+                        <input type="text" name="joinLn" id="joinLn" />
+                    </li>
+                    <li>
+                        <label for="joinEmail">Email: </label>
+                        <input type="email" name="joinEmail" id="joinEmail" />
+                    </li>
+                    <li>
+                        <label for="joinPass">Password: </label>
+                        <input type="password" name="joinPass" id="joinPass" />
+                    </li>
+                </ul>
+                <p><em>6 or more characters</em></p>
+                <p>
+                    <input type="button" value="Join now" name="btnJoinNow" id="btnJoinNow" /></p>
+                <p>Already on LinkedIn? <a href="#">Sign in</a></p>
+            </fieldset>
+        </section>
+
+        <footer>
+            <h4>Search for someone by name:</h4>
+            <ul>
+                <li>
+                    <label for="fn">First name: </label>
+                    <input type="text" name="fn" id="fn" />
+                </li>
+                <li>
+                    <label for="ln">Last name: </label>
+                    <input type="text" name="ln" id="ln" />
+                </li>
+            </ul>
+            <input type="button" value="Go" name="btnSearch" id="btnSearch" />
+        </footer>
+    </form>
+</body>
+</html>

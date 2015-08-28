@@ -1,0 +1,31 @@
+﻿body {
+    background: #FFF;
+    color: #000;
+    font-size: 1em;
+}
+
+table.first {
+    border: 0;
+    border-spacing: 5px 5px;
+}
+
+    table.first th {
+        vertical-align: top;
+        font-size: 1.6em;
+    }
+
+    table.first td {
+        vertical-align: top;
+    }
+
+table.second {
+    width: 200px;
+    border: 1px solid #000;
+    border-spacing: 2px 2px;
+}
+    table.second th,
+    table.second td {
+        border: 1px solid #000;
+        text-align: center;
+        font-weight: normal;
+    }

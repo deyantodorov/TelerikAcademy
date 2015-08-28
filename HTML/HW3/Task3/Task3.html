@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Task 2</title>
+    <meta name="description" content="Create the following using tables and forms" />
+    <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+    <form method="post" action="#">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6">Drag a column header and drop it here to group by the column</th>
+                </tr>
+                <tr class="titles">
+                    <td>ProductID</td>
+                    <td>Product name</td>
+                    <td>Unit price</td>
+                    <td>Quantity per unit</td>
+                    <td>Units in stock</td>
+                    <td>Discontinued</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="id" id="id" /></td>
+                    <td>
+                        <input type="text" name="productName" id="productName" /></td>
+                    <td>
+                        <input type="text" name="unitPrice" id="unitPrice" />
+                        <a href="#" class="filter" id="unitPriceFilter"></a>
+                    </td>
+                    <td>
+                        <input type="text" name="quantityPerUnit" id="quantityPerUnit" />
+
+                    </td>
+                    <td>
+                        <input type="text" name="unitsInStock" id="unitsInStock" />
+                        <a href="#" class="filter" id="unitsInStockFilter"></a>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="discontinued" id="discontinued" />
+                        <a href="#" class="filter" id="discontinuedFilter"></a>
+                    </td>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <ul class="pagging">
+                            <li>
+                                <a href="#" class="paggingBtn" id="first"></a></li>
+
+                            <li>
+                                <a href="#" class="paggingBtn" id="prev"></a></li>
+                            <li><a href="#" class="on">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li>...</li>
+                            <li>
+                                <a href="#" class="paggingBtn" id="next"></a></li>
+                            <li>
+                                <a href="#" class="paggingBtn" id="last"></a></li>
+                        </ul>
+                        <div class="pageSize">
+                            <label>Page size:</label>
+                            <select>
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                                <option value="1000">100</option>
+                                <option value="200">200</option>
+                                <option value="500">500</option>
+                            </select>
+                        </div>
+
+                        <div class="pageInfo">12313123 items in 123123 pages</div>
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" checked="checked" /></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" checked="checked" /></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Chai</td>
+                    <td>&#x24; 18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td>
+                        <input type="checkbox" disabled="disabled" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

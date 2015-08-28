@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Task 1</title>
+    <meta name="description" content="Create a Web form that looks like this sample:" />
+    <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+    <form method="post" action="#">
+        <table>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit" name="submit" id="submit" />
+                        <input type="reset" value="Clear This Form" name="reset" id="reset" />
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td class="left">
+                        <label for="ln">Last Name</label></td>
+                    <td class="right">
+                        <input name="ln" id="ln" type="text" tabindex="1" /></td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="fn">First Name</label></td>
+                    <td class="right">
+                        <input name="fn" id="fn" type="text" tabindex="2" /></td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="address">Address</label></td>
+                    <td class="right">
+                        <textarea cols="40" rows="3" name="address" id="address" tabindex="3"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="city">City</label></td>
+                    <td class="right">
+                        <input name="city" id="city" type="text" tabindex="4" />
+                        <label for="state">State</label>
+                        <input name="state" id="state" type="text" tabindex="5" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="zip">Zip/Postal code</label></td>
+                    <td class="right">
+                        <input name="zip" id="zip" type="text" tabindex="6" /></td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="country">Country</label></td>
+                    <td class="right">
+                        <select name="country" id="country" tabindex="7">
+                            <option value="bg">Bulgaria</option>
+                            <option value="c2">Country 2</option>
+                            <option value="c3">Country 3</option>
+                            <option value="c4">Country 4</option>
+                        </select>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="pCode">Phone(country code, area code, number)</label></td>
+                    <td class="right">(+
+                        <input name="pCode" id="pCode" type="text" tabindex="8" />
+                        )
+                        <input name="pArea" id="pArea" type="text" tabindex="9" />
+                        -
+                        <input name="pNumber" id="pNumber" type="text" tabindex="10" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="email">E-mail</label></td>
+                    <td class="right">
+                        <input name="email" id="email" type="text" tabindex="11" /></td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="month">Birth Date</label></td>
+                    <td class="right">
+                        <label for="month">Month</label>
+                        <input name="month" id="month" type="text" tabindex="12" maxlength="2" />
+                        <label for="day">Day</label>
+                        <input name="day" id="day" type="text" tabindex="13" maxlength="2" />
+                        <label for="year">Year (4 digit)</label>
+                        <input name="year" id="year" type="text" tabindex="13" maxlength="4" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="sex">Gender</label></td>
+                    <td class="right">
+                        <select name="sex" id="sex" tabindex="14">
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="sDate1">Starting Date</label></td>
+                    <td class="right">
+                        <input type="radio" name="startDate" id="sDate1" tabindex="15" />
+                        <label for="sDate1"> Spring 2006</label>
+                        <input type="radio" name="startDate" id="sDate2" tabindex="16" />
+                        <label for="sDate2"> Summer 2006</label>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <label for="comments">Comments/Questions</label></td>
+                    <td class="right">
+                        <textarea cols="40" rows="3" name="comments" id="comments" tabindex="17"></textarea>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

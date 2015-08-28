@@ -1,0 +1,19 @@
+body {
+    background-color: #ccecff;
+    color: #001b45;
+}
+
+a {
+    color: #5991d7;
+    margin-right: 20px;
+}
+
+    a.on {
+        color: #838487;
+    }
+
+ul {
+    list-style-type: none;
+    margin-left: 30px;
+    padding-left: 0;
+}

@@ -1,0 +1,12 @@
+﻿body {
+    background: #FFF;
+    color: #000;
+    font-size: 1em;
+}
+
+table {
+    text-align: left;
+    vertical-align: middle;
+    border: 0;
+    border-spacing: 5px 5px;
+}
