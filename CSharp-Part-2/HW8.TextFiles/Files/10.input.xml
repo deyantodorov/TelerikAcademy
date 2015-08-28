@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<student>
+	<name>Pesho</name>
+	<age>21</age>
+	<interests count="1">
+		<instrest id="ddd" asdf="af"> Games </instrest>
+		<instrest> C# </instrest>
+		<instrest> CSS </instrest>
+		<instrest> HTML </instrest>
+		<hobbies>
+			<hobby>Fishing</hobby>
+			<hobby>Dating</hobby>
+		</hobies>
+	</interests>
+	<name>Kiro</name>
+	<age>87</age>
+	<interests count="3">
+		<instrest id="ddd" asdf="af"> Games </instrest>
+		<instrest> C# </instrest>
+		<instrest> Java </instrest>
+		<instrest> PHP </instrest>
+		<instrest> Movies </instrest>
+		<hobbies>
+			<hobby>Drinking</hobby>
+			<hobby>Sometimes sex</hobby>
+		</hobies>
+	</interests>
+	
+</student>
