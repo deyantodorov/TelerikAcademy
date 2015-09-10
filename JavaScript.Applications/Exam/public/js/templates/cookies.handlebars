@@ -1,0 +1,31 @@
+<h2>Fortune Cookies</h2>
+<div class="row p20 pull-right">
+    <a href="#/home?likes=1" class="btn btn-default" id="btn-sort-by-likes">Sort by Likes</a>
+    <a href="#/home?shareDate=1" class="btn btn-default" id="btn-sort-by-shareDate">Sort by shareDate</a>
+</div>
+<a href="#/cookie/add" class="btn btn-lg btn-info">Share Cookie</a>
+{{#each this}}
+    <h3><a href="#/home?category={{category}}">{{category}}</a></h3>
+    {{#each items}}
+        <div class="row mt-20">
+            <div class="cookie-item" data-id="{{id}}">
+                <div class="col-md-2">
+                    <img src="{{img}}" alt="{{text}}" width="150" height="150"/>
+                </div>
+                <div class="col-md-8">
+                    <p>{{text}}</p>
+
+                    <p><em>hours: {{hours}}, shareDate: {{shareDate}}</em></p>
+
+                    <p>
+                        <a href="#/cookie/like/{{id}}" class="btn btn-success like">Likes: {{likes}}</a>
+                        <a href="#/cookie/dislike/{{id}}" class="btn btn-danger dislike">Dislikes: {{dislikes}}</a>
+                    </p>
+                    <p>
+                        <a href="#/cookie/reshare/{{id}}" class="btn btn-primary share">Re-Share</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+{{/each}}
