@@ -29,22 +29,36 @@
 
 UML диаграма Singleton pattern:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Singleton pattern")
+![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-CreationalPatterns/Diagrams/Singleton.png "Singleton pattern")
 
 # SIMPLE FACTORY
 
 С негова помощ получаваме инстанция на един от няколко възможни класа в зависимост от предоставената информация. Това означава, че класовете, които се връщат като резултат имат общ родител и методи, но всеки от тях изпълнява задачите по различен начин.
 
+UML диаграма Simple Factory
+
+![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-CreationalPatterns/Diagrams/SimpleFactory.png "Simple Factory")
+
 # FACTORY METHOD PATTERN
 
 Factory method pattern-a ни позволява да енкапсулираме инстанцирането на конкретни типове. Ако се погледне в диаграмата по-долу може да се види, че абстрактния клас „Creator“ ни предоставя интерфейс с метод за създаването на обект. Този метод е по-известен като “factory method”. Всички останали методи, които са имплементирани в абстрактния клас служат, за да оперират върху продукти, които са резултат от factory method. Като официална дефиниция често може да се чуе, че Factory Method-a позволява подкласовете да решат какъв клас да инстанцират. Казва се „решат“ не защото шаблона позволява подкласовете да решават, а защото „Creator“ класа е така написан, че не знае какъв продукт може да се получи. Това се случва според решението на подкласовете.
+
+UML диаграма Factory Method
+
+![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-CreationalPatterns/Diagrams/FactoryMethod.png "Factory Method")
 
 # ABSTRACT FACTORY
 
 Предоставя интерфейс за създаване на семейства от свързани или зависими обекти без да определя техните конкретни класове.
 
+UML диаграма Abstract Factory
+
+![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-CreationalPatterns/Diagrams/AbstractFactory.png "Abstract Factory")
+
 # BUILDER PATTERN
 
 Този шаблон служи за построяването на сложни обекти като използва прости обекти и създава каквото е нужно стъпка по стъпка. Предоставя една от най-добрите възможности за създаването на обекти. Примерно ако имаме случай с ресторант за бързо хранене, където типичната храна е хамбургер и студена напитка. Хамбургера може да бъде вегетариански, пилешки и т.н. и е нужно да се опече. Студената напитка може да е кола или пепси и трябва да се сервира в бутилка.  Детайли могат да се видят на следната UML диаграма:
+
+![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-CreationalPatterns/Diagrams/BuilderPattern.jpg "Builder pattern")
 
 Този шаблон много прилича на Abstract Factory. Каква е разликата? Abstract factory ще върне инстанция директно, а Builder ще има директор, който ще инструктира Builder класа да построи различни части/свойства от обекта и накрая ще получите обекта. Abstract factory не пази история във връзка със създаването, а Builder пази референция към създаденият обект.
