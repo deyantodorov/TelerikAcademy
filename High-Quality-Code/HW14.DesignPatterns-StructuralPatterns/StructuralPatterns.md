@@ -23,8 +23,8 @@
 * По този начин софтуерната библиотека се ползва по-лесно от клиента, по-разбираема е и по-лесно четима.
 * Намалява се зависимостта на софтуерната библиотека към външен код, а се запазва принципа на клиента да се дава най-малко знания за начина на робата на библиотеката.
 * Опаковат се слабо проектираните API в по-добри.
-
 * UML диаграма
+
 ![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-StructuralPatterns/Diagrams/facade.gif "Facade Pattern")
 
 ## Composite Pattern
@@ -33,9 +33,13 @@
 При този шаблон всеки един елемент се характеризира като съставно листо от дървовидна структура. На опростено дървовидна структура може да се види на следната UML диаграма:
 
 ![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-StructuralPatterns/Diagrams/CompositePattern.png "Composite Pattern")
+
 Конкретен пример в използването на Composite pattern може да се види на следната UML диаграма:
+
 ![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-StructuralPatterns/Diagrams/CompositePattern2.png "Composite Pattern")
+
 IEmployee интерфейса дефинира операции, които всички работници трябва да могат да изпълняват
+
 Worker класа са работници, които нямат подчинени и само могат да изпълняват метода ShowHappiness()
 Supervisor класа са работници, които могат да управляват други работници
 Ключовото в composite pattern-а е, че позволява да се създаде структура с общи операции.
