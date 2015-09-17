@@ -6,17 +6,17 @@
 
 ### Основни поведенчески шаблони
 
-*Chain of Responsibility
-*Iterator
-*Template Method
-*Strategy
-*Command
-*Observer
-*Memento
-*Visitor
-*State
-*Interpreter
-*Specification
+- Chain of Responsibility
+- Iterator
+- Template Method
+- Strategy
+- Command
+- Observer
+- Memento
+- Visitor
+- State
+- Interpreter
+- Specification
 
 ## Chain of Responsibility
 
@@ -46,13 +46,13 @@ UML диаграма:
 
 Участниците в този шаблон са:
 
-*Iterator(Abstractor) – осигурява интерфейс за достъп и обхождане на елемнти
+- Iterator(Abstractor) – осигурява интерфейс за достъп и обхождане на елемнти
 
-*ConcreteIterator(Iterator) – наследява Iterator и имплементира неговите интерфейси. Запазва състояние за конкретната позиция.
+- ConcreteIterator(Iterator) – наследява Iterator и имплементира неговите интерфейси. Запазва състояние за конкретната позиция.
 
-*Agregate (AbastractCollection) – дефинира интерфейс за създаване на Iterator обект
+- Agregate (AbastractCollection) – дефинира интерфейс за създаване на Iterator обект
 
-*ConcreteAggregate (Collection) – имплементира създаването на итератор, за да върне правилната инстанция на ConcreteIterator. 
+- ConcreteAggregate (Collection) – имплементира създаването на итератор, за да върне правилната инстанция на ConcreteIterator. 
 
 В .NET итератор шаблона се ползва в IEnumerable. 
 
