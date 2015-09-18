@@ -113,7 +113,7 @@ UML диаграма:
 
 Характерното за този шаблон е, че запазва и има възможност да възстанови вътрешното състояние на обект. По-елементарен пример, но не и за реализация, е Photoshop history, в което имате Undo опция и може да се връщаме назад. В най-различни приложения имаме опциите Undo/Redo и именно те са идеален пример, в който имаме приложение на използването на шаблона Memento.  Примерна UML диаграма:
 
-![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-BehavioralPatterns/Diagrams/MementoPattern.jpg "Memento Pattern")
+![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-BehavioralPatterns/Diagrams/MementoPattern.png "Memento Pattern")
 
 Класа **Originator** е обекта, който ще бъде записван и възстановяван в последствие. В променливата **state** се записва информация за състоянието на обекта. Метода **CreateMemento** служи за записване на текущото състояние.  Метода **SetMemento** служи за възстановяване на състоянието.
 
@@ -131,12 +131,6 @@ UML диаграма:
 
 ## State Pattern
 
-
-
 ## Interpreter Pattern
 
-
-
 ## Specification Pattern
-
-
