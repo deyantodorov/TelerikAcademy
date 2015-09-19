@@ -71,7 +71,7 @@ UML диаграма:
 
 Този шаблон дефинира „семейство от алгоритми“, енкапсулира всеки от тях и ги прави взаимнозаменяеми. По този начин се дава възможност на клиент да ги използва независимо. Примерна UML диаграма:
 
-![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-BehavioralPatterns/Diagrams/ Strategy.gif "Strategy Pattern")
+![alt text](https://github.com/deyantodorov/TelerikAcademy/blob/master/High-Quality-Code/HW14.DesignPatterns-BehavioralPatterns/Diagrams/Strategy.gif "Strategy Pattern")
 
 **„Семейство от алгоритми“ ** - това означава, че имаме функционалност в тези алгоритми, която получава еднакъв резултат след изпълнение, но получаването на резултата се случва по различен начин. Т.е. алгоритъма се изпълнява по различен начин.
 
