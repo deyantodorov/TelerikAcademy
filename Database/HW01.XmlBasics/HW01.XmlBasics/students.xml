@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     2. Create XML document students.xml, which contains structured description of students. For each student you should enter information for 
+        his name, sex, birth date, phone, email, course, specialty, faculty number and a list of taken exams (exam name, tutor, score).
+        
+     5. Add default namespace for the students "urn:students".
+-->
+<?xml-stylesheet type="text/xsl" href="T07.XsltStudents.xslt"?>
+<students xmlns:students="urn:students">
+  <student>
+    <name>Bobi</name>
+    <sex>man</sex>
+    <birthdate>18.06.2010</birthdate>
+    <phone>1231123123</phone>
+    <email>bobi@bobi.com</email>
+    <course>JavaScript</course>
+    <specialty>Front-End Development</specialty>
+    <facultynumber>123123</facultynumber>
+    <exams>
+      <exam>
+        <name>HTML</name>
+        <tutor>
+          <name>Chicho Misho</name>
+          <endorsements>endorsements</endorsements>
+        </tutor>
+        <score>6</score>
+        <enrollment>
+          <date>12-12-2012</date>
+          <examscore>6.00</examscore>
+        </enrollment>
+      </exam>
+      <exam>
+        <name>CSS</name>
+        <tutor>
+          <name>Chicho Pesho</name>
+          <endorsements>endorsements</endorsements>
+        </tutor>
+        <score>5</score>
+        <enrollment>
+          <date>12-12-2012</date>
+          <examscore>6.00</examscore>
+        </enrollment>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Ani</name>
+    <sex>woman</sex>
+    <birthdate>07.09.2011</birthdate>
+    <phone>1231123123</phone>
+    <email>ani@ani.com</email>
+    <course>JavaScript</course>
+    <specialty>Interaction Designer</specialty>
+    <facultynumber>123123</facultynumber>
+    <exams>
+      <exam>
+        <name>HTML</name>
+        <tutor>
+          <name>Chicho Misho</name>
+          <endorsements>endorsements</endorsements>
+        </tutor>
+        <score>6</score>
+        <enrollment>
+          <date>12-12-2012</date>
+          <examscore>6.00</examscore>
+        </enrollment>
+      </exam>
+      <exam>
+        <name>CSS</name>
+        <tutor>
+          <name>Chicho Pesho</name>
+          <endorsements>endorsements</endorsements>
+        </tutor>
+        <score>5</score>
+        <enrollment>
+          <date>12-12-2012</date>
+          <examscore>6.00</examscore>
+        </enrollment>
+      </exam>
+    </exams>
+  </student>
+</students>
