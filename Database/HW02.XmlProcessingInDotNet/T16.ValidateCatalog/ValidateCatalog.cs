@@ -23,7 +23,7 @@ namespace T16.ValidateCatalog
         {
             doc.Validate(schema, (obj, ev) =>
             {
-                Console.WriteLine($"{file} - {ev.Message}");
+                Console.WriteLine("{0} - {1}", file, ev.Message);
             });
         }
     }

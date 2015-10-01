@@ -21,14 +21,14 @@ namespace T06.ExtractsAllSongsTitlesWithLinq
         {
             if (allTitles.Any())
             {
-                allTitles.ForEach(x => Console.WriteLine($"Song title: {x}"));
+                allTitles.ForEach(x => Console.WriteLine("Song title: {0}", x));
             }
             else
             {
                 Console.WriteLine("No songs");
             }
 
-            Console.WriteLine($"Total songs: {allTitles.Count}");
+            Console.WriteLine("Total songs: {0}", allTitles.Count);
         }
 
         private static List<string> GetSongsTitles(string path)
@@ -37,11 +37,11 @@ namespace T06.ExtractsAllSongsTitlesWithLinq
 
             // Get songs titles and test if title isn't null
             var songs = (from song in document.Descendants("song")
-                           let xElement = song.Element("title")
-                           where xElement != null
-                           select xElement.Value)
+                         let xElement = song.Element("title")
+                         where xElement != null
+                         select xElement.Value)
                            .ToList();
-            
+
             return songs;
         }
     }

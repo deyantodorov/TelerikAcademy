@@ -26,6 +26,8 @@ namespace HW03.ProcessingJsonInDotNet
         private const string XmlFilePath = @"../../YouTube.xml";
         private const string JsonFilePath = @"../../YouTube.json";
         private const string HtmlFilePath = @"../../YouTube.html";
+        private const string YouTubeUrlWatch = "https://www.youtube.com/watch?v=";
+        private const string YouTubeUrlEmbed = "https://www.youtube.com/embed/";
 
         private static void Main()
         {
@@ -49,8 +51,8 @@ namespace HW03.ProcessingJsonInDotNet
 
             foreach (var video in videos)
             {
-                builder.Append($"<h1><a href=\"https://www.youtube.com/watch?v={video.Id}\" target=\"_blank\">{video.Name}</a></h1>");
-                builder.Append($"<iframe width='560' height='315' src='https://www.youtube.com/embed/{video.Id}' frameborder='0' allowfullscreen></iframe>");
+                builder.Append(string.Format("<h1><a href=\"{0}{1}\" target=\"_blank\">{2}</a></h1>", YouTubeUrlWatch, video.Id, video.Name));
+                builder.Append(string.Format("<iframe width='560' height='315' src='{0}{1}' frameborder='0' allowfullscreen></iframe>", YouTubeUrlEmbed, video.Id));
             }
 
             builder.Append("</body>");

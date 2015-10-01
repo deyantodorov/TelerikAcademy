@@ -24,7 +24,7 @@ namespace T03.ExtractArtistAndAlbumsWithXPath
         {
             foreach (var artist in artists)
             {
-                Console.WriteLine($"Artist name: {artist.Key}, Number of albums: {artist.Value}");
+                Console.WriteLine("Artist name: {0}, Number of albums: {1}", artist.Key, artist.Value);
             }
         }
 

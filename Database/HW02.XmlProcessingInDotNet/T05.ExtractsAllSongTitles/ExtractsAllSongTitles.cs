@@ -21,14 +21,14 @@ namespace T05.ExtractsAllSongTitles
         {
             if (allTitles.Any())
             {
-                allTitles.ForEach(x => Console.WriteLine($"Song title: {x}"));
+                allTitles.ForEach(x => Console.WriteLine("Song title: {0}", x));
             }
             else
             {
                 Console.WriteLine("No songs");
             }
 
-            Console.WriteLine($"Total songs: {allTitles.Count}");
+            Console.WriteLine("Total songs: {0}", allTitles.Count);
         }
 
         private static List<string> GetSongsTitles(string path)
