@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="T13.Catalogue.xslt"?>
+<!--
+  Create a XML file representing catalogue. The catalogue should contain albums of different artists. 
+  For each album you should define: name, artist, year, producer, price and a list of songs. Each song should be described by name and duration.
+-->
+<catalog>
+  <albums>
+    <name>Empire Burlesque</name>
+    <artist>Bob Dylan</artist>
+    <country>USA</country>
+    <producer>Columbia</producer>
+    <price>21.90</price>
+    <year>1985</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Empire Burlesque 2</name>
+    <artist>Bob Dylan</artist>
+    <country>USA</country>
+    <producer>Columbia</producer>
+    <price>10.90</price>
+    <year>1985</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Hide your heart</name>
+    <artist>Bonnie Tyler</artist>
+    <country>UK</country>
+    <producer>CBS Records</producer>
+    <price>9.90</price>
+    <year>1988</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Greatest Hits</name>
+    <artist>Dolly Parton</artist>
+    <country>USA</country>
+    <producer>RCA</producer>
+    <price>9.90</price>
+    <year>1982</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Still got the blues</name>
+    <artist>Gary Moore</artist>
+    <country>UK</country>
+    <producer>Virgin records</producer>
+    <price>10.20</price>
+    <year>1990</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Eros</name>
+    <artist>Eros Ramazzotti</artist>
+    <country>EU</country>
+    <producer>BMG</producer>
+    <price>9.90</price>
+    <year>1997</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>One night only</name>
+    <artist>Bee Gees</artist>
+    <country>UK</country>
+    <producer>Polydor</producer>
+    <price>10.90</price>
+    <year>1998</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Sylvias Mother</name>
+    <artist>Dr.Hook</artist>
+    <country>UK</country>
+    <producer>CBS</producer>
+    <price>8.10</price>
+    <year>1973</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Maggie May</name>
+    <artist>Rod Stewart</artist>
+    <country>UK</country>
+    <producer>Pickwick</producer>
+    <price>8.50</price>
+    <year>1990</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Romanza</name>
+    <artist>Andrea Bocelli</artist>
+    <country>EU</country>
+    <producer>Polydor</producer>
+    <price>10.80</price>
+    <year>1996</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>When a man loves a woman</name>
+    <artist>Percy Sledge</artist>
+    <country>USA</country>
+    <producer>Atlantic</producer>
+    <price>8.70</price>
+    <year>1987</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Black angel</name>
+    <artist>Savage Rose</artist>
+    <country>EU</country>
+    <producer>Mega</producer>
+    <price>10.90</price>
+    <year>1995</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>1999 Grammy Nominees</name>
+    <artist>Many</artist>
+    <country>USA</country>
+    <producer>Grammy</producer>
+    <price>10.20</price>
+    <year>1999</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>For the good times</name>
+    <artist>Kenny Rogers</artist>
+    <country>UK</country>
+    <producer>Mucik Master</producer>
+    <price>8.70</price>
+    <year>1995</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Big Willie style</name>
+    <artist>Will Smith</artist>
+    <country>USA</country>
+    <producer>Columbia</producer>
+    <price>9.90</price>
+    <year>1997</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Tupelo Honey</name>
+    <artist>Van Morrison</artist>
+    <country>UK</country>
+    <producer>Polydor</producer>
+    <price>8.20</price>
+    <year>1971</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Soulsville</name>
+    <artist>Jorn Hoel</artist>
+    <country>Norway</country>
+    <producer>WEA</producer>
+    <price>7.90</price>
+    <year>1996</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>The very best of</name>
+    <artist>Cat Stevens</artist>
+    <country>UK</country>
+    <producer>Island</producer>
+    <price>8.90</price>
+    <year>1990</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Stop</name>
+    <artist>Sam Brown</artist>
+    <country>UK</country>
+    <producer>A and M</producer>
+    <price>8.90</price>
+    <year>1988</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Bridge of Spies</name>
+    <artist>T`Pau</artist>
+    <country>UK</country>
+    <producer>Siren</producer>
+    <price>7.90</price>
+    <year>1987</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Private Dancer</name>
+    <artist>Tina Turner</artist>
+    <country>UK</country>
+    <producer>Capitol</producer>
+    <price>8.90</price>
+    <year>1983</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Midt om natten</name>
+    <artist>Kim Larsen</artist>
+    <country>EU</country>
+    <producer>Medley</producer>
+    <price>7.80</price>
+    <year>1983</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Pavarotti Gala Concert</name>
+    <artist>Luciano Pavarotti</artist>
+    <country>UK</country>
+    <producer>DECCA</producer>
+    <price>9.90</price>
+    <year>1991</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>The dock of the bay</name>
+    <artist>Otis Redding</artist>
+    <country>USA</country>
+    <producer>Atlantic</producer>
+    <price>7.90</price>
+    <year>1987</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Picture book</name>
+    <artist>Simply Red</artist>
+    <country>EU</country>
+    <producer>Elektra</producer>
+    <price>7.20</price>
+    <year>1985</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Red</name>
+    <artist>The Communards</artist>
+    <country>UK</country>
+    <producer>London</producer>
+    <price>7.80</price>
+    <year>1987</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+  <albums>
+    <name>Unchain my heart</name>
+    <artist>Joe Cocker</artist>
+    <country>USA</country>
+    <producer>EMI</producer>
+    <price>8.20</price>
+    <year>1987</year>
+    <songs>
+      <song>
+        <title>Trak 01</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 02</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 03</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 04</title>
+        <duration>03:33:11</duration>
+      </song>
+      <song>
+        <title>Trak 05</title>
+        <duration>03:33:11</duration>
+      </song>
+    </songs>
+  </albums>
+</catalog>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+	<album>
+		<name>Empire Burlesque</name>
+		<artist>Bob Dylan</artist>
+	</album>
+	<album>
+		<name>Empire Burlesque 2</name>
+		<artist>Bob Dylan</artist>
+	</album>
+	<album>
+		<name>Hide your heart</name>
+		<artist>Bonnie Tyler</artist>
+	</album>
+	<album>
+		<name>Greatest Hits</name>
+		<artist>Dolly Parton</artist>
+	</album>
+	<album>
+		<name>Still got the blues</name>
+		<artist>Gary Moore</artist>
+	</album>
+	<album>
+		<name>Eros</name>
+		<artist>Eros Ramazzotti</artist>
+	</album>
+	<album>
+		<name>One night only</name>
+		<artist>Bee Gees</artist>
+	</album>
+	<album>
+		<name>Sylvias Mother</name>
+		<artist>Dr.Hook</artist>
+	</album>
+	<album>
+		<name>Maggie May</name>
+		<artist>Rod Stewart</artist>
+	</album>
+	<album>
+		<name>Romanza</name>
+		<artist>Andrea Bocelli</artist>
+	</album>
+	<album>
+		<name>When a man loves a woman</name>
+		<artist>Percy Sledge</artist>
+	</album>
+	<album>
+		<name>Black angel</name>
+		<artist>Savage Rose</artist>
+	</album>
+	<album>
+		<name>1999 Grammy Nominees</name>
+		<artist>Many</artist>
+	</album>
+	<album>
+		<name>For the good times</name>
+		<artist>Kenny Rogers</artist>
+	</album>
+	<album>
+		<name>Big Willie style</name>
+		<artist>Will Smith</artist>
+	</album>
+	<album>
+		<name>Tupelo Honey</name>
+		<artist>Van Morrison</artist>
+	</album>
+	<album>
+		<name>Soulsville</name>
+		<artist>Jorn Hoel</artist>
+	</album>
+	<album>
+		<name>The very best of</name>
+		<artist>Cat Stevens</artist>
+	</album>
+	<album>
+		<name>Stop</name>
+		<artist>Sam Brown</artist>
+	</album>
+	<album>
+		<name>Bridge of Spies</name>
+		<artist>T`Pau</artist>
+	</album>
+	<album>
+		<name>Private Dancer</name>
+		<artist>Tina Turner</artist>
+	</album>
+	<album>
+		<name>Midt om natten</name>
+		<artist>Kim Larsen</artist>
+	</album>
+	<album>
+		<name>Pavarotti Gala Concert</name>
+		<artist>Luciano Pavarotti</artist>
+	</album>
+	<album>
+		<name>The dock of the bay</name>
+		<artist>Otis Redding</artist>
+	</album>
+	<album>
+		<name>Picture book</name>
+		<artist>Simply Red</artist>
+	</album>
+	<album>
+		<name>Red</name>
+		<artist>The Communards</artist>
+	</album>
+	<album>
+		<name>Unchain my heart</name>
+		<artist>Joe Cocker</artist>
+	</album>
+</albums>

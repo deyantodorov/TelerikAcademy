@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+  <album>
+    <album>Empire Burlesque</album>
+    <price>21.90</price>
+  </album>
+  <album>
+    <album>Empire Burlesque 2</album>
+    <price>10.90</price>
+  </album>
+  <album>
+    <album>Hide your heart</album>
+    <price>9.90</price>
+  </album>
+  <album>
+    <album>Greatest Hits</album>
+    <price>9.90</price>
+  </album>
+  <album>
+    <album>Still got the blues</album>
+    <price>10.20</price>
+  </album>
+  <album>
+    <album>Eros</album>
+    <price>9.90</price>
+  </album>
+  <album>
+    <album>One night only</album>
+    <price>10.90</price>
+  </album>
+  <album>
+    <album>Sylvias Mother</album>
+    <price>8.10</price>
+  </album>
+  <album>
+    <album>Maggie May</album>
+    <price>8.50</price>
+  </album>
+  <album>
+    <album>Romanza</album>
+    <price>10.80</price>
+  </album>
+  <album>
+    <album>When a man loves a woman</album>
+    <price>8.70</price>
+  </album>
+  <album>
+    <album>Black angel</album>
+    <price>10.90</price>
+  </album>
+  <album>
+    <album>1999 Grammy Nominees</album>
+    <price>10.20</price>
+  </album>
+  <album>
+    <album>For the good times</album>
+    <price>8.70</price>
+  </album>
+  <album>
+    <album>Big Willie style</album>
+    <price>9.90</price>
+  </album>
+  <album>
+    <album>Tupelo Honey</album>
+    <price>8.20</price>
+  </album>
+  <album>
+    <album>Soulsville</album>
+    <price>7.90</price>
+  </album>
+  <album>
+    <album>The very best of</album>
+    <price>8.90</price>
+  </album>
+  <album>
+    <album>Stop</album>
+    <price>8.90</price>
+  </album>
+  <album>
+    <album>Bridge of Spies</album>
+    <price>7.90</price>
+  </album>
+  <album>
+    <album>Private Dancer</album>
+    <price>8.90</price>
+  </album>
+  <album>
+    <album>Midt om natten</album>
+    <price>7.80</price>
+  </album>
+  <album>
+    <album>Pavarotti Gala Concert</album>
+    <price>9.90</price>
+  </album>
+  <album>
+    <album>The dock of the bay</album>
+    <price>7.90</price>
+  </album>
+  <album>
+    <album>Picture book</album>
+    <price>7.20</price>
+  </album>
+  <album>
+    <album>Red</album>
+    <price>7.80</price>
+  </album>
+  <album>
+    <album>Unchain my heart</album>
+    <price>8.20</price>
+  </album>
+</albums>
