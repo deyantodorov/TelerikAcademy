@@ -1,0 +1,33 @@
+Connection string for "PetStore" database:
+	
+	metadata=res://*/PetStoreDbContext.csdl|res://*/PetStoreDbContext.ssdl|res://*/PetStoreDbContext.msl;provider=System.Data.SqlClient;provider connection string="data source=.;initial catalog=PetStore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+	<connectionStrings>
+		<add name="PetStoreEntities" connectionString="metadata=res://*/PetStoreEntities.csdl|res://*/PetStoreEntities.ssdl|res://*/PetStoreEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.;initial catalog=PetStore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+	</connectionStrings>
+	
+Connection string for "SocialNetwork" database:
+<connectionStrings>
+	<add name="SocialNetworkDB" connectionString="Data Source=.;Initial Catalog=SocialNetworkDB;Integrated Security=True" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+Relationships for "PetStore" database: 
+	Colors - Pets - one-to-many
+	Species - Pets - one-to-many
+	Countires - Species - one-to-many
+	Categories - Products - one-to-many
+	Products - Species - many-to-many - with ProductsInSpecies
+	
+	Colors name is restricted by color - black, white, red and mixed with check constraint
+	Unique names for Species name and Country Name
+	
+	Added additional indexes for Price and Birth and Pets to speed up searching
+
+Relationships for "SocialNetwork" database: 
+	Users - Images - one-to-many
+	Users - Posts - through PostsUsers - many-to-many
+	Users - Message - one-to-many
+	Users - Friendship one-to-many
+	
+JSON Result files location: (fill in here)
+
+Skeleton\Problem 5 6 7 - Code First\SocialNetwork.ConsoleClient\JsonFiles
