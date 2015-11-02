@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artist System</title>
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="Content/main.css">
+    <link rel="stylesheet" href="Content/toastr.min.css">
+</head>
+<body>
+<div id="body" class="container">
+    <header>
+        <h1 class="page-header"><a href="#/">Artist System</a> </h1>
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a href="#/songs" class="text-uppercase">Songs</a></li>
+                <li><a href="#/artists" class="text-uppercase">Artists</a></li>
+                <li><a href="#/albums" class="text-uppercase">Albums</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main"></div>
+    <footer>
+        <p class="text-center">ArtistSystem server should be started to work everything correctly</p>
+    </footer>
+</div>
+<!-- Libs -->
+<script src="Scripts/lib/jquery-2.1.4.min.js"></script>
+<script src="Scripts/lib/sammy-0.7.5.min.js"></script>
+<script src="Scripts/lib/handlebars.min.js"></script>
+<script src="Scripts/lib/bootstrap.min.js"></script>
+<script src="Scripts/lib/toastr.min.js"></script>
+
+<!-- App: Controllers -->
+<script src="Scripts/app/controllers/songController.js"></script>
+<script src="Scripts/app/controllers/artistController.js"></script>
+<script src="Scripts/app/controllers/albumController.js"></script>
+
+<!-- App: Loaders -->
+<script src="Scripts/app/validator.js"></script>
+<script src="Scripts/app/data.js"></script>
+<script src="Scripts/app/templates.js"></script>
+<script src="Scripts/app/jsonRequester.js"></script>
+
+<!-- App: Start -->
+<script src="Scripts/app/app.js"></script>
+</body>
+</html>

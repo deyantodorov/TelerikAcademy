@@ -1,0 +1,27 @@
+﻿<h2>List of Albums</h2>
+<p class="text-right"><a href="#/albums/add" class="btn btn-primary">Add Album</a></p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>ReleaseDate</th>
+            <th>Producer</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this}}
+        <tr data-id="{{Id}}">
+            <td>{{Id}}</td>
+            <td>{{Title}}</td>
+            <td>{{ReleaseDate}}</td>
+            <td>{{Producer}}</td>
+            <td>
+                <span class="glyphicon glyphicon-pencil ml-5 mr-5 pointer edit-album" title="Edit"></span>
+                <span class="glyphicon glyphicon-trash ml-5 mr-5 pointer delete-album" title="Delete"></span>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

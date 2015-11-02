@@ -1,0 +1,27 @@
+﻿<h2>List of Artists</h2>
+<p class="text-right"><a href="#/artists/add" class="btn btn-primary">Add Artist</a></p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>BirthDate</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this}}
+        <tr data-id="{{Id}}">
+            <td>{{Id}}</td>
+            <td>{{Name}}</td>
+            <td>{{Country}}</td>
+            <td>{{BirthDate}}</td>
+            <td>
+                <span class="glyphicon glyphicon-pencil ml-5 mr-5 pointer edit-artist" title="Edit"></span>
+                <span class="glyphicon glyphicon-trash ml-5 mr-5 pointer delete-artist" title="Delete"></span>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
