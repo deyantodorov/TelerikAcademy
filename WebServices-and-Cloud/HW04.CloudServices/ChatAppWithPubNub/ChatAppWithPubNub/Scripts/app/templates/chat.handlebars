@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <h2>List of received messages:</h2>
+    <div class="row">
+        <div class="messages p20">
+            <div class="messsage row">
+                {{#each this}}
+                <div class="col-md-2">IP: {{Ip}}</div>
+                <div class="col-md-10">Message: {{Message}}</div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="row mt-30">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="tb-message">Type some message to be send: </label>
+                <textarea rows="3" cols="30" class="form-control" id="tb-message"></textarea>
+            </div>
+        </div>
+        <div class="col-md-2 pt-22">
+            <a href="javascript:void(0);" class="btn btn-lg btn-primary" id="btn-send">Send Message</a>
+        </div>
+    </div>
+</div>
