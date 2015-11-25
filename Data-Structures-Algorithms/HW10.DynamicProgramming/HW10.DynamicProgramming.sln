@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.KnapsackProblem", "T01.KnapsackProblem\T01.KnapsackProblem.csproj", "{292B5D03-7C2A-4B91-B68F-FD97BC78A917}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.MinimumEditDistance", "T02.MinimumEditDistance\T02.MinimumEditDistance.csproj", "{07DD6531-945A-426F-89F7-70C760EF7356}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AlgoAcademy", "AlgoAcademy", "{BD69760B-F334-4C59-998F-BB9E148A823B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribonachi", "AlgoAcademy\Tribonachi\Tribonachi.csproj", "{1DAA4981-5F63-478C-942C-F0A9A20A7650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSum", "AlgoAcademy\SuperSum\SuperSum.csproj", "{288A09D7-E0CA-45A0-B8E0-F9642210BFEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brackets", "AlgoAcademy\Brackets\Brackets.csproj", "{72E07088-3EB4-4353-9468-419D0E396D3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{292B5D03-7C2A-4B91-B68F-FD97BC78A917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292B5D03-7C2A-4B91-B68F-FD97BC78A917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{292B5D03-7C2A-4B91-B68F-FD97BC78A917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{292B5D03-7C2A-4B91-B68F-FD97BC78A917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DD6531-945A-426F-89F7-70C760EF7356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DD6531-945A-426F-89F7-70C760EF7356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DD6531-945A-426F-89F7-70C760EF7356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DD6531-945A-426F-89F7-70C760EF7356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAA4981-5F63-478C-942C-F0A9A20A7650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAA4981-5F63-478C-942C-F0A9A20A7650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAA4981-5F63-478C-942C-F0A9A20A7650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAA4981-5F63-478C-942C-F0A9A20A7650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288A09D7-E0CA-45A0-B8E0-F9642210BFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288A09D7-E0CA-45A0-B8E0-F9642210BFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288A09D7-E0CA-45A0-B8E0-F9642210BFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288A09D7-E0CA-45A0-B8E0-F9642210BFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E07088-3EB4-4353-9468-419D0E396D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E07088-3EB4-4353-9468-419D0E396D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E07088-3EB4-4353-9468-419D0E396D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E07088-3EB4-4353-9468-419D0E396D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DAA4981-5F63-478C-942C-F0A9A20A7650} = {BD69760B-F334-4C59-998F-BB9E148A823B}
+		{288A09D7-E0CA-45A0-B8E0-F9642210BFEA} = {BD69760B-F334-4C59-998F-BB9E148A823B}
+		{72E07088-3EB4-4353-9468-419D0E396D3E} = {BD69760B-F334-4C59-998F-BB9E148A823B}
+	EndGlobalSection
+EndGlobal
