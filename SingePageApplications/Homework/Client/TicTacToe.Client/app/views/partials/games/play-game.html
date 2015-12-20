@@ -1,0 +1,41 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <p>
+                First Player: <strong>{{vm.game.FirstPlayerName}}</strong>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p>
+                Game State: <strong>{{vm.game.State | gameState}}</strong>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p>
+                Second Player: <strong>{{vm.game.SecondPlayerName || 'No second player yet'}}</strong>
+            </p>
+        </div>
+    </div>
+    <div class="row mt20px pt25px">
+        <div class="col-md-6 col-lg-offset-3">
+            <table>
+                <tr>
+                    <td ng-repeat="field in (vm.game.Board | collectionSubset:0:2) track by $index">
+                        <img class="img-thumbnail cursor-pointer" ng-src="{{'/app/img/' + field + '.png'}}" ng-click="vm.play(1, $index)" alt="Select cell {{$index + 1}}" title="Select cell {{$index + 1}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat="field in (vm.game.Board | collectionSubset:3:5) track by $index">
+                        <img class="img-thumbnail cursor-pointer" ng-src="{{'/app/img/' + field + '.png'}}" ng-click="vm.play(2, $index)" alt="Select cell {{$index + 4}}" title="Select cell {{$index + 4}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat="field in (vm.game.Board | collectionSubset:6:8) track by $index">
+                        <img class="img-thumbnail cursor-pointer" ng-src="{{'/app/img/' + field + '.png'}}" ng-click="vm.play(3, $index)" alt="Select cell {{$index + 7}}" title="Select cell {{$index + 7}}" />
+                    </td>
+                </tr>
+            </table>    
+        </div>
+    </div>
+</div>
+

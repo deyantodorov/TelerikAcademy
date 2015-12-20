@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe Game</title>
+    <base href="/" />
+    <link rel="stylesheet" href="app/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/css/bootstrap/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="app/css/toastr/toastr.min.css" />
+    <link rel="stylesheet" href="app/css/kendoui/kendo.common.min.css" />
+    <link rel="stylesheet" href="app/css/kendoui/kendo.default.min.css" />
+    <link rel="stylesheet" href="app/css/app.min.css" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+</head>
+<body ng-app="myApp" ng-cloak ng-controller="MainController">
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">{{appName}}</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li><a href="/games">Games</a></li>
+                </ul>
+                <div ng-include="'app/views/partials/identity/login.html'"></div>
+            </div>
+        </div>
+    </div>
+    <div ng-view></div>
+    <footer>
+        <hr />
+        <p class="text-center">{{appName}}</p>
+    </footer>
+
+    <!-- Libs -->
+    <script src="app/lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="app/lib/toastr/toastr.min.js"></script>
+    <script src="app/lib/bootstrap/bootstrap.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="app/lib/angular/angular.min.js"></script>
+    <script src="app/lib/angular/angular-route.min.js"></script>
+    <script src="app/lib/angular/angular-cookies.min.js"></script>
+
+    <!-- App -->
+    <script src="app/js/app.js"></script>
+    <script src="app/js/common/notifier.js"></script>
+
+    <!-- Identity -->
+    <script src="app/js/identity/auth.js"></script>
+    <script src="app/js/identity/authorization.js"></script>
+    <script src="app/js/identity/identity.js"></script>
+    <script src="app/js/identity/login-controller.js"></script>
+    <script src="app/js/identity/register-controller.js"></script>
+
+    <!-- Common -->
+    <script src="app/js/common/main-controller.js"></script>
+    <script src="app/js/common/data.js"></script>
+    <script src="app/js/common/collection-subset-filter.js"></script>
+
+    <!-- Home -->
+    <script src="app/js/home/home-controller.js"></script>
+
+    <!-- Games -->
+    <script src="app/js/games/games-services.js"></script>
+    <script src="app/js/games/games-state-filter.js"></script>
+    <script src="app/js/games/games-controller.js"></script>
+    <script src="app/js/games/game-play-controller.js"></script>
+</body>
+</html>
