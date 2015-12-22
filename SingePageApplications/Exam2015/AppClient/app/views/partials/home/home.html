@@ -1,0 +1,42 @@
+﻿<div class="container text-center">
+    <div class="jumbotron">
+        <h1>Welcome to Source Control System</h1>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4>Users</h4>
+            <h3><strong>{{vm.stats.Users}}</strong></h3>
+        </div>
+        <div class="col-md-4">
+            <h4>Projects</h4>
+            <h3><strong>{{vm.stats.Projects}}</strong></h3>
+        </div>
+        <div class="col-md-4">
+            <h4>Commits</h4>
+            <h3><strong>{{vm.stats.Commits}}</strong></h3>
+        </div>
+    </div>
+
+    <div class="row mt25px">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Latest Projects</h3>
+                </div>
+                <div class="panel-body">
+                    <div all-projects />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Latest Commits</h3>
+                </div>
+                <div class="panel-body">
+                    <div all-commits />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

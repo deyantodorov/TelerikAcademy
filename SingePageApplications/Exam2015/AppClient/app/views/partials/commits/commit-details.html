@@ -1,0 +1,10 @@
+﻿<div class="container">
+    <div class="well">
+        <h1 class="text-center">Commit</h1>
+        <h3 class="pt10px">Commit number: {{vm.commit.Id}}</h3>
+        <h3 class="pt10px">Commit by: {{vm.commit.UserName}}</h3>
+        <div class="pt10px"><h3>Code:</h3> <code>{{vm.commit.SourceCode}}</code></div>
+        <h3 class="pt10px">Created on: {{vm.commit.CreatedOn | dateFilter}}</h3>
+        <h3 class="pt10px">Project name: "{{vm.commit.ProjectName}}"</h3>
+    </div>
+</div>

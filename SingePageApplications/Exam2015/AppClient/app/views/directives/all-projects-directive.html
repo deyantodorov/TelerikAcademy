@@ -1,0 +1,19 @@
+﻿<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>License</th>
+        <th>Total Users</th>
+        <th>Created On</th>
+    </tr>
+    <tr ng-repeat="project in vm.projects | filter: vm.filter">
+        <td><a href="/projects/{{project.Id}}">{{project.Name}}</a></td>
+        <td>
+            {{project.License}}
+            <span ng-show="vm.identity.isAuthenticated()">
+                <img ng-src="/app/img/{{project.License | imgFilter}}" alt="{{project.License}}" width="45" />
+            </span>
+        </td>
+        <td>{{project.TotalUsers}}</td>
+        <td>{{project.CreatedOn | dateFilter}}</td>
+    </tr>
+</table>
