@@ -1,0 +1,15 @@
+{
+  "name": "HW01.FileUploadWebSite",
+  "version": "0.0.0",
+  "description": "HW01.FileUploadWebSite",
+  "main": "app.js",
+  "author": {
+    "name": "Deyan",
+    "email": ""
+  },
+  "dependencies": {
+    "formidable": "^1.0.17",
+    "fs-extra": "^0.26.3",
+    "guid": "0.0.12"
+  }
+}
