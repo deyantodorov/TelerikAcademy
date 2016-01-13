@@ -1,0 +1,34 @@
+extends ../shared/layout
+
+block main-content
+    h1 User profile
+    hr
+    p Username
+        strong(class='text-uppercase pl-5') #{user.username}
+    p First Name
+        strong(class='pl-5') #{user.firstName}
+    p Last Name
+        strong(class='pl-5') #{user.lastName}
+    p Birthdate
+        strong(class='pl-5') #{user.birthdate}
+    p Points
+        strong(class='pl-5') #{user.points}
+    p
+        a(href='/edit-profile', class='btn btn-default') Edit Profile
+
+    br
+    br
+    h1 User images
+    hr
+    table.table.table-bordered
+        tr
+            th File name
+            th Private
+            th Options
+        each file in files
+            tr
+                td
+                    a(href='/files/download/#{file.url}') #{file.fileName}
+                td #{file.isPrivate ? 'Yes' : 'No'}
+                td
+                    a(href='/files/delete/#{file.url}') Delete

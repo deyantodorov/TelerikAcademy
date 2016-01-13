@@ -1,0 +1,55 @@
+body {
+  font-size: 1em;
+  font-family: Arial;
+}
+#wrap {
+  margin: 0 auto;
+  width: 960px;
+}
+#wrap h1 {
+  text-align: center;
+}
+#wrap nav {
+  background: orangered;
+}
+#wrap nav ul {
+  text-align: center;
+}
+#wrap nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+#wrap nav ul li a {
+  font-weight: bold;
+  display: inline-block;
+  padding: 15px 25px;
+  color: #fff;
+  text-decoration: none;
+}
+#wrap nav ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+#wrap .table {
+  width: 100%;
+}
+#wrap .table table {
+  width: 100%;
+  border: 1px solid red;
+}
+#wrap .table table th {
+  background: green;
+  color: white;
+}
+#wrap .table table td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+#wrap footer {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  text-align: center;
+  background: darkgrey;
+}

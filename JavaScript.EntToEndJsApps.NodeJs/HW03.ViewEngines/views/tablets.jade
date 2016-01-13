@@ -1,0 +1,20 @@
+extends layout
+block title
+    title= pageTitle
+block content
+    h1= pageTitle
+    div.table
+        table
+            thead
+                tr
+                    th Model
+                    th ScreenSize
+                    th Price
+            tbody
+                each item in products
+                    tr
+                        td= item.model
+                        td= item.screenSize
+                            |  inch
+                        td= item.price
+                            |  USD

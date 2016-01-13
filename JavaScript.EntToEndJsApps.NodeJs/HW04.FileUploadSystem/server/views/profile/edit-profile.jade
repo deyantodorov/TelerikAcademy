@@ -1,0 +1,22 @@
+extends ../shared/layout
+
+block main-content
+    h1 Edit profile
+    hr
+    form(method='post' action='/edit-profile')
+        p Username
+            strong(class='text-uppercase pl-5') #{user.username}
+        br
+        label(for='firstName') First Name
+        input(type='text' name='firstName' id='firstName' class='form-control' value='#{user.firstName ? user.firstName : ""}')
+        br
+        label(for='lastName') Last Name
+        input(type='text' name='lastName' id='lastName' class='form-control' value='#{user.lastName ? user.lastName : ""}')
+        br
+        label(for='birthdate') Birthdate
+        input(type='date' name='birthdate' id='birthdate' class='form-control' value='#{user.birthdate}')
+        br
+        p Points
+            strong(class='pl-5') #{user.points}
+        p
+            input(type='submit', class='btn btn-default', value='Update Profile')

@@ -1,0 +1,15 @@
+doctype
+html(lang='en')
+    head
+        block title
+            title Simple web site for buying mobile devices
+        link(rel='stylesheet' type='text/css' href='style/main.css')
+    body
+        div#wrap
+            nav
+                ul
+                    each menu in menus
+                        li
+                            a(href='/' + menu.url)= menu.title
+            block content
+            footer Simple web site for buying mobile devices

@@ -1,0 +1,20 @@
+extends ../shared/layout
+
+block main-content
+    h1(class='well') Upload file
+    button(class='btn btn-default', id='add-input-file')  Add File
+    form(method='post', id='form-upload', enctype='multipart/form-data')
+        br
+        br
+        label(for='file_0') Upload file
+        input(type='file', name='file_0', id='file_0', class='form-control')
+        br
+        input(type='checkbox' name='private_0' id='private_0')
+        label(for='private_0', class='pl-10') Is private file
+
+        br
+        br
+        input(type='submit' value='Upload files' class='btn btn-primary')
+
+block page-scripts
+    script(src='js/upload.js')
