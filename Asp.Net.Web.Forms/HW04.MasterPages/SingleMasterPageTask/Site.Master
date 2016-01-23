@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SingleMasterPageTask.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="Header" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="/Content/materialize-v0.97.1/css/materialize.min.css" />
+</head>
+<body>
+    <form id="mainForm" runat="server">
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <header>
+                        <nav class="nav-wrapper">
+                            <a href="~/Default.aspx" runat="server" class="brand-logo">Site Logo</a>
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                <li><a href="~/Default.aspx" runat="server">Home</a></li>
+                                <li><a href="~/PersonalInfo.aspx" runat="server">Personal info</a></li>
+                                <li><a href="~/Friends.aspx" runat="server">Friends</a></li>
+                                <li><a href="~/AdditionalInfo.aspx" runat="server">Additional info</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <div>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script src="/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="/Content/materialize-v0.97.1/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="NestedMasterPagesTask.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="Content/materialize-v0.97.1/css/materialize.min.css" />
+</head>
+<body>
+    <form id="formMain" runat="server">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="Scripts/jquery-2.2.0.min.js"></script>
+    <script src="Content/materialize-v0.97.1/js/materialize.min.js"></script>
+</body>
+</html>

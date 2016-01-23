@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#"
+    MasterPageFile="~/Site.Master"
+    AutoEventWireup="true"
+    CodeBehind="BgMasterPage.master.cs"
+    Inherits="NestedMasterPagesTask.bg_BG.BgMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <a href="~/en-US/Default.aspx" runat="server" class="btn right">English</a>
+    <h1 class="title">Български език</h1>
+
+    <header>
+        <nav class="nav-wrapper">
+            <a href="~/Default.aspx" runat="server" class="brand-logo">Лого на сайта</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="~/bg-BG/Default.aspx" runat="server">Начло</a></li>
+                <li><a href="~/bg-BG/AboutUs.aspx" runat="server">За нас</a></li>
+                <li><a href="~/bg-BG/Contacts.aspx" runat="server">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <asp:ContentPlaceHolder runat="server" ID="BgContent">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+
