@@ -1,0 +1,9 @@
+﻿body .popup {
+    display: block;
+    position: absolute;
+    color: red;
+}
+
+body .parent {
+    position: relative;
+}
