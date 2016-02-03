@@ -1,0 +1,119 @@
+﻿@model BitCalculator.ViewModels.Calculator.CalculatorViewModel
+@{
+    ViewBag.Title = "Bit Calculator";
+}
+
+<div class="jumbotron">
+    <h1>Bit Calculator</h1>
+</div>
+
+<div class="row">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(null, new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Quantity, new { @class = "control-label col-md-4" })
+            @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control col-md-8" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.TypeId, new { @class = "control-label col-md-4" })
+            @Html.DropDownListFor(m => m.TypeId, Model.TypeList, new { @class = "form-control col-md-8" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.KiloId, new { @class = "control-label col-md-4" })
+            @Html.DropDownListFor(m => m.KiloId, Model.KiloList, new { @class = "form-control col-md-8" })
+        </div>
+
+        <input type="submit" class="btn btn-primary col-md-offset-5" />
+
+        <div class="clearfix" style="padding: 20px;"></div>
+
+        <div class="col-md-offset-2 col-md-6">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Type</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Bit</td>
+                    <td>@Html.DisplayName(Model.GetBit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Byte</td>
+                    <td>@Html.DisplayName(Model.GetByte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Kilobit</td>
+                    <td>@Html.DisplayName(Model.GetKilobit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Kilobyte</td>
+                    <td>@Html.DisplayName(Model.GetKilobyte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Megabit</td>
+                    <td>@Html.DisplayName(Model.GetMegabit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Megabyte</td>
+                    <td>@Html.DisplayName(Model.GetMegabyte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Gigabit</td>
+                    <td>@Html.DisplayName(Model.GetGigabit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Gigabyte</td>
+                    <td>@Html.DisplayName(Model.GetGigabyte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Terabit</td>
+                    <td>@Html.DisplayName(Model.GetTerabit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Terabyte</td>
+                    <td>@Html.DisplayName(Model.GetTerabyte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Petabit</td>
+                    <td>@Html.DisplayName(Model.GetPetabit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Petabyte</td>
+                    <td>@Html.DisplayName(Model.GetPetabyte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Exabit</td>
+                    <td>@Html.DisplayName(Model.GetExabit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Exabyte</td>
+                    <td>@Html.DisplayName(Model.GetExabyte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Zettabit</td>
+                    <td>@Html.DisplayName(Model.GetZettabit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Zettabyte</td>
+                    <td>@Html.DisplayName(Model.GetZettabyte.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Yottabit</td>
+                    <td>@Html.DisplayName(Model.GetYottabit.ToString())</td>
+                </tr>
+                <tr>
+                    <td>Yottabyte</td>
+                    <td>@Html.DisplayName(Model.GetYottabyte.ToString())</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="clearfix"></div>
+    }
+</div>

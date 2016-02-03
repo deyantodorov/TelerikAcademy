@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1", "Task1", "{EAC6636F-A21E-450A-9E2B-4813B8776E3B}"
+	ProjectSection(SolutionItems) = preProject
+		Task1.md = Task1.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCalculator", "BitCalculator\BitCalculator.csproj", "{C5245397-82E9-4C21-B03E-1AA77D77B6DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationalApplication", "InformationalApplication\InformationalApplication.csproj", "{3F135333-40DF-4F22-8262-9FAA1EF42228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConstraint", "CustomConstraint\CustomConstraint.csproj", "{62EDDA2D-0C30-442E-8858-BAC86437CBD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5245397-82E9-4C21-B03E-1AA77D77B6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5245397-82E9-4C21-B03E-1AA77D77B6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5245397-82E9-4C21-B03E-1AA77D77B6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5245397-82E9-4C21-B03E-1AA77D77B6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F135333-40DF-4F22-8262-9FAA1EF42228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F135333-40DF-4F22-8262-9FAA1EF42228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F135333-40DF-4F22-8262-9FAA1EF42228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F135333-40DF-4F22-8262-9FAA1EF42228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62EDDA2D-0C30-442E-8858-BAC86437CBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62EDDA2D-0C30-442E-8858-BAC86437CBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62EDDA2D-0C30-442E-8858-BAC86437CBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62EDDA2D-0C30-442E-8858-BAC86437CBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
