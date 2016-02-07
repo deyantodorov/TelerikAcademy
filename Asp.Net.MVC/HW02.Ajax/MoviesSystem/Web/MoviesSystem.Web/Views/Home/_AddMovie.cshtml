@@ -1,0 +1,61 @@
+﻿@using System.Web.UI.WebControls
+@using MoviesSystem.Web.Infrastructure.HtmlHelpers
+@model MoviesSystem.Web.ViewModels.MovieViewModel
+<div class="row" id="addMovie">
+    @using (Ajax.BeginForm("Add", "Home", new AjaxOptions()
+    {
+        HttpMethod = "Post",
+        InsertionMode = InsertionMode.ReplaceWith,
+        UpdateTargetId = "addMovie",
+        OnSuccess = "window.location.reload()"
+    }))
+    {
+        @Html.HiddenFor(m => m.Id)
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Add new movie...</h2>
+                @Html.Submit(new { @class = "btn btn-primary", value = "Add" })
+                <a href="javascript:void(0)" onclick="closeAddMovie()" class="btn btn-default">Cancel</a>
+                <br />
+                <br />
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Title)
+            </div>
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Director)
+            </div>
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Year)
+            </div>
+        </div>
+        <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Male Role</h2>
+                        @Html.EditorFor(m => m.LeadingMaleRole.Name)
+                        @Html.EditorFor(m => m.LeadingMaleRole.GenderId, new { ListItem = Model.LeadingMaleRole.Genders })
+                        @Html.EditorFor(m => m.LeadingMaleRole.Age)
+                        @Html.EditorFor(m => m.LeadingMaleRole.StudioName)
+                        @Html.EditorFor(m => m.LeadingMaleRole.StudioAddress)
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Female Role</h2>
+                        @Html.EditorFor(m => m.LeadingFemaleRole.Name)
+                        @Html.EditorFor(m => m.LeadingFemaleRole.GenderId, new { ListItem = Model.LeadingFemaleRole.Genders })
+                        @Html.EditorFor(m => m.LeadingFemaleRole.Age)
+                        @Html.EditorFor(m => m.LeadingFemaleRole.StudioName)
+                        @Html.EditorFor(m => m.LeadingFemaleRole.StudioAddress)
+                    </div>
+                </div>
+    }
+    <br />
+    <br />
+    <br />
+</div>
+

@@ -1,0 +1,8 @@
+﻿@model object
+<div class="clearfix">
+    @Html.ValidationMessageFor(m => m, null, new { @class = "" + ViewBag.AddClass })
+    <div>
+        @Html.LabelFor(m => m, new { @class = "" + ViewBag.AddClass })
+        @Html.DropDownListFor(m => m, (IEnumerable<SelectListItem>)ViewBag.ListItem, (string)ViewBag.DefaultText, new { @class = "form-control " + ViewBag.AddClass })
+    </div>
+</div>

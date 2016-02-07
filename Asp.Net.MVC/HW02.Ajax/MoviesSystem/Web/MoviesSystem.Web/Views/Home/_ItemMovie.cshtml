@@ -1,0 +1,40 @@
+﻿@model MoviesSystem.Web.ViewModels.MovieViewModel
+<tr id="movie@(Model.Id)">
+    <td>@Model.Id</td>
+    <td>@Model.Title</td>
+    <td>@Model.Director</td>
+    <td>
+        @Model.LeadingMaleRole.Name <br />
+        @Model.LeadingMaleRole.Age <br />
+        @Model.LeadingMaleRole.StudioName <br />
+        @Model.LeadingMaleRole.StudioAddress <br />
+    </td>
+    <td>
+        @Model.LeadingFemaleRole.Name <br />
+        @Model.LeadingFemaleRole.Age <br />
+        @Model.LeadingFemaleRole.StudioName <br />
+        @Model.LeadingFemaleRole.StudioAddress <br />
+    </td>
+    <td>
+        @Html.AntiForgeryToken()
+        @Ajax.ActionLink("Edit", "Edit",
+        new { id = Model.Id },
+        new AjaxOptions
+        {
+            HttpMethod = "Post",
+            InsertionMode = InsertionMode.ReplaceWith,
+            UpdateTargetId = "movie" + @Model.Id,
+        },
+        new { @class = "btn btn-success" })
+
+        @Ajax.ActionLink("Delete", "Delete",
+        new { id = Model.Id },
+        new AjaxOptions
+        {
+            HttpMethod = "Post",
+            Confirm = "Do you really want to delete item " + @Model.Id,
+            OnSuccess = "window.location.reload()"
+        },
+        new { @class = "btn btn-danger" })
+    </td>
+</tr>

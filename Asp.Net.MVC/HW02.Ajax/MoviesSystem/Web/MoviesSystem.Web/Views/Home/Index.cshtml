@@ -1,0 +1,74 @@
+﻿@using MoviesSystem.Web.ViewModels
+@model IEnumerable<MoviesSystem.Web.ViewModels.MovieViewModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="text-center">
+        <h1>Movies Catalog</h1>
+        @Ajax.ActionLink("Add New Movie", "Add", null,
+            new AjaxOptions()
+            {
+                InsertionMode = InsertionMode.ReplaceWith,
+                UpdateTargetId = "addMovie"
+            },
+            new { @class = "btn btn-lg btn-primary" })
+    </div>
+</div>
+
+<div id="addMovie"></div>
+
+<div class="row" id="data"></div>
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Leading Male Role</th>
+            <th>Leading Female Role</th>
+            <th>Options</th>
+        </tr>
+        @{
+            foreach (var movie in Model)
+            {
+                @Html.Partial("_ItemMovie", movie)
+            }
+        }
+    </table>
+    <div class="text-center">
+        <ul class="pagination pagination-lg">
+            @{
+                var pages = int.Parse(ViewBag.Pages.ToString());
+                var current = int.Parse(ViewBag.CurrentPage.ToString());
+
+                for (int i = 0; i < pages; i++)
+                {
+                    if (current == i)
+                    {
+            <li class="active">
+                <a href="?page=@i">@(i + 1)</a>
+            </li>
+                    }
+                    else
+                    {
+            <li>
+                <a href="?page=@i">@(i + 1)</a>
+            </li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        function closeAddMovie() {
+            $('#addMovie').html("");
+        }
+    </script>
+}

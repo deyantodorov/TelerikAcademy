@@ -1,0 +1,8 @@
+﻿@model object
+<div class="clearfix">
+    @Html.ValidationMessageFor(m => m, null, new { @class = "" + ViewBag.AddClass })
+    <div>
+        @Html.LabelFor(m => m, new { @class = "" + ViewBag.AddClass })
+        @Html.TextAreaFor(m => m, new { @class = "form-control " + ViewBag.AddClass, rows = "5", cols = "2" })
+    </div>
+</div>
