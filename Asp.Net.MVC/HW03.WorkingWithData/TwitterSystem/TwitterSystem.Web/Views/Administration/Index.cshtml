@@ -1,0 +1,25 @@
+﻿@model IList<TwitterSystem.Web.ViewModels.Tweets.TweetAdminShortViewModel>
+@{
+    ViewBag.Title = "Administration";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Content</th>
+        <th>Options</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Content</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = @item.Id }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Delete", "Delete", new { id = @item.Id }, new { @class = "btn btn-default" })
+            </td>
+        </tr>
+    }
+</table>

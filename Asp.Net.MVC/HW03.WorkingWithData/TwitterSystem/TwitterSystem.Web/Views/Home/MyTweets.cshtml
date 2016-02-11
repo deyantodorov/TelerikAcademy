@@ -1,0 +1,17 @@
+﻿@model IList<TwitterSystem.Web.ViewModels.Tweets.TweetShortViewModel>
+@{
+    ViewBag.Title = "My tweets:";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@foreach (var item in Model)
+{
+    <div class="well">
+        <p>
+            @Html.ActionLink(@item.Content, "Details", new { id = @item.Id })
+        </p>
+        <p>Comments: <strong>@item.CommentsCount</strong></p>
+        <p>Created: <strong>@item.CretedOn</strong></p>
+    </div>
+}

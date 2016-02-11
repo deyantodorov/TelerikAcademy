@@ -1,0 +1,15 @@
+﻿@model TwitterSystem.Web.ViewModels.Tweets.TweetDetailViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details:</h2>
+
+<p>@Model.Content</p>
+<p>Created on: @Model.CreatedOn</p>
+<h3>ReTweet (@Model.Comments.Count): </h3>
+@foreach (var item in Model.Comments)
+{
+    <p>@item.Content</p>
+    <p>@item.CreatedOn</p>
+}

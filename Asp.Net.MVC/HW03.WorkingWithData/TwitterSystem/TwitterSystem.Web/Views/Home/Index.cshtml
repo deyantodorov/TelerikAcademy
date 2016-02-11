@@ -1,0 +1,15 @@
+﻿@model IList<TwitterSystem.Web.ViewModels.Tags.TagViewModel>
+@{
+    ViewBag.Title = "All Tags";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<ul>
+    @foreach (var tagViewModel in Model)
+    {
+        <li>
+            @Html.ActionLink(@tagViewModel.Name, "Tweets", new { tagId = @tagViewModel.Id })
+        </li>
+    }
+</ul>
