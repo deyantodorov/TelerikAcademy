@@ -1,0 +1,95 @@
+﻿<div class="container">
+    <div class="well">
+        <div class="pull-right">
+            <a href="/projects/{{vm.project.Id}}/addcommits" class="btn btn-primary">Add Commit</a>
+        </div>
+        <h4>
+            Project Id: <strong>{{vm.project.Id}}</strong>
+        </h4>
+        <h4>
+            Name: <strong>{{vm.project.Name}}</strong>
+        </h4>
+        <h4>
+            Created On: <strong>{{vm.project.CreatedOn | dateFilter}}</strong>
+        </h4>
+        <h4>
+            Total Users: <strong>{{vm.project.TotalUsers}}</strong>
+        </h4>
+        <h4>
+            License: <strong>{{vm.project.License}}</strong>
+            <img ng-src="/app/img/{{vm.project.License | imgFilter}}" alt="{{vm.project.License}}" width="65" />
+        </h4>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <strong>Collaborators:</strong>
+        </div>
+        <div class="col-md-4">
+            <span ng-repeat="collaborator in vm.collaborators">{{collaborator}}; </span>
+        </div>
+        <div class="col-md-6">
+            <div ng-show="vm.isCollaborator">
+                <div class="form-group form-inline">
+                    <input type="text" class="form-control" placeholder="Add Collaborator" required="required" ng-model="collaboratorEmail"/>
+                    <button class="btn btn-success" ng-click="vm.addCollaborator(collaboratorEmail)">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt20px pt20px">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="fromDate">From Date</label>
+                <input id="fromDate" ng-model="commit.CreatedOnFrom" class="w70p" k-format="'yyyy-MM-dd HH:mm'" kendo-date-time-picker/>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="toDate">To Date</label>
+                <input id="toDate" ng-model="commit.CreatedOnTo" class="w70p" k-format="'yyyy-MM-dd HH:mm'" kendo-date-time-picker />
+            </div>
+        </div>
+    </div>
+    <div class="row mt20px">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="ByUser">By User e-mail</label>
+                <input type="text" ng-model="vm.request.ByUser" class="form-control" id="ByUser"/>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-8">
+                <button class="btn btn-primary mt25px" ng-click="vm.filterCommits()">Search</button>
+            </div>
+        </div>
+        <div class="col-md-3 mt25px">
+            <div class="form-group form-inline">
+                <label for="pageSize">Page Size: </label>
+                <select id="pageSize" class="form-control" ng-init="vm.request.PageSize = '10'" ng-model="vm.request.PageSize">
+                    <option ng-repeat="i in [10, 20, 30, 40, 50]" value="{{i}}">{{i}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3 mt25px text-right">
+            <div class="col-md-3">
+                <button class="btn btn-default" ng-click="vm.prevPage()">&lt;&lt;</button>
+            </div>
+            <div class="col-md-6">
+                <input type="number" ng-model="vm.request.Page" class="form-control"/>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-default" ng-click="vm.nextPage()">&gt;&gt;</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row mt20px">
+            <div ng-show="vm.commits && vm.commits.length > 0">
+                <div all-commits />
+            </div>
+            <div ng-hide="vm.commits && vm.commits.length > 0">
+                <h2 class="text-center">No Commits</h2>
+            </div>
+        </div>
+    </div>
+</div>

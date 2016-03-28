@@ -1,0 +1,86 @@
+﻿<div class="container">
+    <h1 class="text-center">
+        All Projects
+        <a href="/projects/add" ng-show="vm.identity.isAuthenticated()" class="btn btn-default pull-right">Add Project</a>
+    </h1>
+
+    <div ng-show="vm.identity.isAuthenticated()">
+        <div class="row mt20px pt20px">
+            <div class="col-md-3">
+                <div class="form-group text-center">
+                    <label for="ByUser">Searches ByUser e-mail</label>
+                    <input type="text" ng-model="vm.request.ByUser" class="form-control" id="ByUser" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group text-center">
+                    <label for="filter">Searches in name and description</label>
+                    <input type="text" ng-model="vm.request.Filter" class="form-control" id="filter" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group text-center">
+                    <label for="orderby">Order by</label>
+                    <select id="orderby" class="form-control" ng-init="vm.request.OrderBy = ''" ng-model="vm.request.OrderBy">
+                        <option value="">Select order</option>
+                        <option value="date">Date</option>
+                        <option value="collaborators">Collaborators</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group text-center">
+                    <label for="order">Order Type</label>
+                    <select id="order" class="form-control" ng-init="vm.request.OrderType = ''" ng-model="vm.request.OrderType">
+                        <option value="">Select order type</option>
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <input type="checkbox" id="mine" ng-model="vm.request.OnlyPublic" />
+                            <label for="mine">Only Public</label>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <button class="btn btn-primary btn-lg mt10px" ng-click="vm.filterProjects()">Filter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt15px">
+                <div class="form-group form-inline">
+                    <label for="pageSize">Page Size: </label>
+                    <select id="pageSize" class="form-control" ng-init="vm.request.PageSize = '10'" ng-model="vm.request.PageSize">
+                        <option ng-repeat="i in [10, 20, 30, 40, 50]" value="{{i}}">{{i}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 mt15px text-right">
+                <div class="col-md-3">
+                    <button class="btn btn-default" ng-click="vm.prevPage()">&lt;&lt;</button>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" ng-model="vm.request.Page" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-default" ng-click="vm.nextPage()">&gt;&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt20px">
+        <div ng-show="vm.projects && vm.projects.length > 0">
+            <div all-projects />
+        </div>
+        <div ng-hide="vm.projects && vm.projects.length > 0">
+            <h2 class="text-center">No Results</h2>
+        </div>
+    </div>
+</div>

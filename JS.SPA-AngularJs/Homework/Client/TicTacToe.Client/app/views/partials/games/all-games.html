@@ -1,0 +1,30 @@
+﻿<div class="container">
+    <h1>
+        All Games
+        <span ng-show="vm.identity.isAuthenticated()" class="pull-right">
+            <button class="btn btn-default" ng-click="vm.createGame()">Create Game</button>
+        </span>
+    </h1>
+    <div class="row mt20px pt20">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">#</th>
+                    <th class="text-center">First Player</th>
+                    <th class="text-center">Second Player</th>
+                    <th class="text-center">Game State</th>
+                    <th class="text-center" ng-show="vm.identity.isAuthenticated()">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="game in vm.games">
+                    <td>{{$index+1}}</td>
+                    <td>{{game.FirstPlayerName}}</td>
+                    <td>{{game.SecondPlayerName || 'No second player yet'}}</td>
+                    <td>{{game.State | gameState}}</td>
+                    <td ng-show="vm.identity.isAuthenticated()" class="col-md-2"><button class="btn btn-primary" ng-click="vm.joinGame(game.Id)">Join Game</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

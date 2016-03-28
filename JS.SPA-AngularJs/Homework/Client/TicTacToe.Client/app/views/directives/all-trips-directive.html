@@ -1,0 +1,19 @@
+﻿<table class="table">
+    <tr>
+        <th>Driver</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Departure Time</th>
+        <th ng-if="vm.identity && vm.identity.isAuthenticated()">Is Mine</th>
+    </tr>
+    <tr ng-repeat="trip in vm.trips">
+        <td><a href="/trips/{{trip.id}}">{{trip.driverName}}</a></td>
+        <td>{{trip.from}}</td>
+        <td>{{trip.to}}</td>
+        <td><a href="#">{{trip.departureDate | dateFilter}}</a></td>
+        <td ng-if="vm.identity && vm.identity.isAuthenticated()">
+            <span ng-if="trip.isMine" class="glyphicon glyphicon-ok"></span>
+            <span ng-if="!trip.isMine" class="glyphicon glyphicon-remove"></span>
+        </td>
+    </tr>
+</table>
